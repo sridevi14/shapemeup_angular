@@ -1,13 +1,10 @@
- You can add global styles to this file, and also import other style files
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-/*body{
+body{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
  font-family:poppins;
+
 }
 
 
@@ -35,19 +32,16 @@ margin-top: 100px;
 
 .page{
   overflow-x: hidden;
-
+  
 }
 
 .product_1 p{
 text-align: left;
 font-size: 17px;
 margin-bottom: 100px;
-justify-content: center;
-align-items: center;
 }
 .product_1 h3{
   font-size: 30px;
-  text-align: center;
 }
 .product_2{
   background: #34383D;
@@ -76,7 +70,7 @@ padding-top:60px ;
 
 .biss_module h4::before{
    content:"";
-background-image: url(./Rectangle1.png);
+/* background-image: url(./Rectangle1.png); */
 width: 481px;
 height: 700px;
 position:absolute;
@@ -89,7 +83,7 @@ position:absolute;
 
  .coach_module h4::before{
   content:"";
-background-image: url(./Rectangle2.png);
+/* background-image: url(./Rectangle2.png); */
 width: 481px;
 height: 700px;
 position: absolute;
@@ -102,7 +96,7 @@ left: -113px;
 
 .client_module h4::before{
   content:"";
-background-image: url(./Rectangle3.png);
+/* background-image: url(./Rectangle3.png); */
 width: 563px;
 height: 3102px;
 position: absolute;
@@ -180,7 +174,7 @@ text-align: center;
  }
 
  .mobile_1,.mobile_5{
-  background: #34383D;
+  background-color: #34383D;
 
  }
 
@@ -537,4 +531,4 @@ align-items: center;
   }
 }
 
- */
+

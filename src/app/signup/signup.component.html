@@ -1,0 +1,187 @@
+<main class="page">
+
+ <div class="container sign_up">
+  
+<div class="row check_box">
+   <div class="row dotted">
+<div class="form-check ">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked/>
+  <label class="form-check-label" for="exampleRadios1">
+   Coach
+  </label>
+</div>
+<div class="form-check ">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"/>
+  <label class="form-check-label" for="exampleRadios2">
+   Client
+  </label>
+ 
+</div>
+</div>
+</div>  
+    <form class="mt-5 formaction" (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
+      <div class="row name">
+        <div class="form-group col-lg-6">
+          <label for="firstname">First Name*</label>
+          <input type="text" class="form-control" id="firstname" placeholder="Enter name" name="firstname"
+            formControlName="firstname" />
+          <div class="err" *ngIf="submitted && f.firstname.errors">
+            <div *ngIf="f.firstname.errors.required"> Username is required</div>
+            <div *ngIf="f.firstname.errors.minlength">First Name Should be atleast 3
+              Characters</div>
+              <div *ngIf="f.firstname.errors.maxlength">First Name has limit of 35
+                Characters</div>
+              <div
+                *ngIf="f.firstname.errors.pattern && !f.firstname.errors.maxlength && !f.firstname.errors.minlength">First
+                Name can have only Alphabets</div>
+          </div>
+
+          
+        </div>
+
+        <div class="form-group col-lg-6">
+          <label for="lastname">Last Name*</label>
+          <input type="text" class="form-control" id="lastname" placeholder="Enter Name" name="lastname"
+            formControlName="lastname" />
+          <div class="err" *ngIf="submitted && f.lastname.errors">
+            <div *ngIf="f.lastname.errors.required"> Lastname is required</div>
+            <div *ngIf="f.lastname.errors.minlength">First Name Should be atleast 3
+              Characters</div>
+              <div *ngIf="f.lastname.errors.maxlength">First Name has limit of 35
+                Characters</div>
+              <div
+                *ngIf="f.lastname.errors.pattern && !f.lastname.errors.maxlength && !f.lastname.errors.minlength">First
+                Name can have only Alphabets</div>
+          </div>
+       
+        </div>
+      </div>
+
+    <div class="row ">
+
+        <div class="form-group bday col-lg-6">
+          <label for="birthday">Date of Birth*</label>
+          <input type="date" class="form-control" id="birthday" name="dateofbirth" formControlName="dateofbirth" />
+
+          <div class="err" *ngIf="submitted && f.dateofbirth.errors">
+            <div *ngIf="f.dateofbirth.errors.required"> Date Of Birth is required</div>
+          </div>
+
+        </div>
+
+        <div class="form-group age col-lg-6">
+          <label for="age">Age</label>
+          <input type="text" class="form-control" id="age" name="age" formControlName="age" />
+          <div class="err" *ngIf="submitted && f.age.errors">
+            <!-- <div *ngIf="f.age.errors.required"> Age is required</div> -->
+            <div
+            *ngIf="f.age.errors.pattern">
+           Enter your Age
+          </div>
+          </div>
+
+
+        </div>
+      </div>
+
+  
+      <h5 class="gender">Gender*</h5>
+      <div class="row dotted">
+
+        <div class="form-check for_gender">
+          <input class="form-check-input" type="radio" name="male" id="exampleRadios1" value="male" formControlName="gender" />
+          <label class="form-check-label" for="exampleRadios1">
+            Male
+          </label>
+        </div>
+        <div class="form-check ">
+          <input class="form-check-input" type="radio" name="male" id="exampleRadios2" value="female" formControlName="gender" />
+          <label class="form-check-label" for="exampleRadios2">
+            Female
+          </label>
+        </div>
+        &nbsp;
+        <br/><br/>
+        <div class="err" *ngIf="submitted && f.gender.errors">
+         
+          <div *ngIf="f.gender.errors.required"> Gender is required</div>
+        </div>
+      </div>
+
+      <br />
+      <div class="row phone">
+        <div class="form-group col-lg-6">
+          <label for="phone">Phone number*</label>
+          <input type="text" class="form-control" id="phone" placeholder="Phone number" name="phone" 
+   formControlName="phone"
+          />
+
+          <div class="err" *ngIf="submitted && f.phone.errors">
+            <div *ngIf="f.phone.errors.required"> Phone Number is Required</div>
+            <div
+            *ngIf="f.phone.errors.pattern">
+            Please Enter Valid Phone Number.
+          </div>
+          </div>
+
+        </div>
+        <div class="form-group col-lg-6">
+          <label for="exampleFormControlInput1">Email*</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" 
+          
+          name="email" formControlName="email"
+          />
+
+          <div class="err" *ngIf="submitted && f.email.errors">
+            <div *ngIf="f.email.errors.required"> Email is Required</div>
+            <div
+            *ngIf="f.email.errors.pattern">
+            Please Enter Valid Email
+          </div>
+
+          </div>
+
+
+        </div>
+      </div>
+ 
+
+      <div class="row password">
+  <div class="form-group col-lg-6">
+  <label for="inputPassword">Password*</label>
+  <input type="password" class="form-control" id="inputPassword" placeholder="Password"
+ 
+  name="password" formControlName="password"   
+    />
+    <div class="err" *ngIf="submitted && f.password.errors">
+      <div *ngIf="f.password.errors.required"> Password is Required</div>
+      <div *ngIf="f.password.errors.minlength"> Password should contains min 8 Charector</div>
+ 
+    </div>
+
+
+
+  </div>
+   <div class="form-group col-lg-6">
+  <label for="confirmpass">Confirm Password*</label>
+  <input type="password" class="form-control" id="confirmpass" placeholder="Password"
+  name="password" formControlName="Confirm_password"
+  />
+  <div class="err" *ngIf="submitted && f.Confirm_password.errors">
+    <div *ngIf="f.Confirm_password.errors.MustMatch"> didnt match</div>
+    <div *ngIf="f.Confirm_password.errors.required"> Confirm your Password</div>
+  </div>
+
+   </div>
+   </div>  
+      <br/><br/>
+      <div class=" col-12 mb-5 Registeration" style="text-align: center;">
+        <button type="submit" class="btn btn submit">Finish Registeration</button>
+        <br />
+        <small>Already have an account?<a href="/shapmeup/src/app/login/login.component.html">Login</a> </small>
+      </div>
+    </form>
+
+  </div>
+  
+</main>

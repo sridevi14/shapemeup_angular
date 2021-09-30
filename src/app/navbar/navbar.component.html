@@ -1,0 +1,70 @@
+
+    
+      <nav class="navbar mat-elevation-z8" >
+        <div class="nav-container">
+          <div class="nav_brand">
+          <div  class="nav-logo" routerLink="/">
+            SHAPEMEUP
+        </div>
+         </div>
+         
+<div class="nav_links" >
+          <ul class= "nav-menu" *ngIf="showMe">
+            <li class="nav-item">
+              
+               <a class="nav-links" routerLink="mobile">Apps</a> 
+              
+            </li>
+            <li class="nav-item">
+              
+             <a class="nav-links" routerLink="about">About</a>   
+             
+            </li>
+
+            <li class="nav-item">
+              
+             <a class="nav-links" routerLink="excercise">  Excercise
+            </a> 
+            </li>
+           
+            <!-- <li class="nav-item">
+             
+              <a class="nav-links" routerLink="diet">Diet</a>  
+              
+            </li> -->
+
+            <li class="nav-item">
+              
+          <a class="nav-links" routerLink="coach">  Coach
+        </a>  
+            </li>
+
+           
+            </ul>
+         
+         
+          <ul class="nav-menu2" *ngIf="showMe">
+            <li class="nav-item">
+              
+              <a class="nav-links login " routerLink="login">Log In</a>  
+              
+            </li>
+
+            <li class="nav-item">
+              
+<a class="nav-links" routerLink="signup">Sign Up</a>
+            
+            </li>
+         </ul>
+         </div>
+          <div class="nav-icon" >
+          
+            <i class= "fas fa-times" (click)="toggleTag()"><mat-icon>menu</mat-icon></i>
+          </div>
+        </div>
+      </nav>
+  
+    
+
+
+

@@ -1,164 +1,44 @@
- You can add global styles to this file, and also import other style files
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-/*body{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
- font-family:poppins;
-}
 
 
 
 
 
-.box{
-    background: #FEEFA8;
-margin-top: 100px;
-
-  } 
-
-  .btn-dark{
-    background: #34383D  !important;
 
 
-  }
-  #button{
-      margin:10px;
-  }
 
   
 
 
 
-.page{
+
+
+
+
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+body{
   overflow-x: hidden;
-
-}
-
-.product_1 p{
-text-align: left;
-font-size: 17px;
-margin-bottom: 100px;
-justify-content: center;
-align-items: center;
-}
-.product_1 h3{
-  font-size: 30px;
-  text-align: center;
-}
-.product_2{
-  background: #34383D;
-
-  z-index: -7;
-  position: relative;
-}
-
-
-
-.biss_module,.coach_module,.client_module{
-  text-align: left;
-padding-top:60px ;
-
- }
-
- .coach_module p{
-   padding-bottom:100px;
- }
- .coach_module{
-   margin-top:100px;
- }
-
- 
- 
-
-.biss_module h4::before{
-   content:"";
-background-image: url(./Rectangle1.png);
-width: 481px;
-height: 700px;
-position:absolute;
- background-repeat: no-repeat;
- z-index: -5;
- top: -436px;
- left: -30px;
-
-} 
-
- .coach_module h4::before{
-  content:"";
-background-image: url(./Rectangle2.png);
-width: 481px;
-height: 700px;
-position: absolute;
-background-repeat: no-repeat;
-z-index: -5;
-top: -263px;
-left: -113px;
-
-}
-
-.client_module h4::before{
-  content:"";
-background-image: url(./Rectangle3.png);
-width: 563px;
-height: 3102px;
-position: absolute;
-background-repeat: no-repeat;
-z-index: -5;
-top: -161px;
-left: -113px;
-
-
-}  
-
-
-
-.product_2 p{
-  color:white;
-  font-size:18px;
-}
-
-.client_module h4{
-  color: #FEEFA8;
-
-}
-
-
- .coach_module .coach_text{
-   align-self: center;
- }
- 
-
-.box_1 ,.box_3 ,.box_6, .box_8{
-  background: #FEEFA8;
-align-items: center;
-  padding:20px;
-text-align: center;
-  box-sizing: content-box;
-  width:200px;
-  height:200px;
-  display: flex;
-  margin:10px;
-align-items: center;
-justify-content: center;
-}
-
-
-.box_2 ,.box_4 ,.box_5, .box_7{
-  background: #34383D;
-display: flex;
-align-items: center;
-justify-content: center;
-  padding:20px;
-  color:white;
-text-align: center;
-  box-sizing: content-box;
-  width:200px;
-  margin:10px;
-  height:200px;
 }
 
  .container label{
@@ -217,17 +97,6 @@ text-align: center;
   z-index: 5;
 }
 
-.mobile::before{
-  content: "";
-background-image: url(./Rectangle4.png);
-width: 685px;
-height: 3173px;
-position: absolute;
-z-index: -5;
-background-repeat: no-repeat;
-left: -14px;
-top: 139px;
-}
 
 .mobile_2{
   position: relative;
@@ -247,53 +116,13 @@ top: 139px;
   position: relative;
   z-index:2;
 }
-.mobile2::before{
-  content: "";
-background-image: url(./Rectangle5.png);
-width: 800px;
-height: 3173px;
-position: absolute;
-z-index: -5;
-background-repeat: no-repeat;
-left: -146px;
-top:260px;
-}
 
-.mobile3::before{
-  content: "";
-background-image: url(./Rectangle6.png);
-width: 600px;
-height: 3000px;
-position: absolute;
-z-index: -5;
-background-repeat: no-repeat;
-left: 103px;
-top: 49px;
-}
 
-.mobile4::before{
-  content: "";
-background-image: url(./Rectangle7.png);
-width: 756px;
-height: 900px;
-position: absolute;
-z-index: -5;
-background-repeat: no-repeat;
-left: -70px;
-top: 60px;
-}
 
-.mobile5::before{
-  content: "";
-background-image: url(./Rectangle8.png);
-width: 872px;
-height: 900px;
-position: absolute;
-z-index: -5;
-background-repeat: no-repeat;
-left: -350px;
-top: 195px;
-}
+
+
+
+
 .frontpage{
   overflow-x: hidden;
 }
@@ -444,9 +273,11 @@ font-size: 20px;
   color: #FEEFA8;
 }
 
-.coach_module{
-  margin-top:0px;
+.form-check {
+    padding-left: 53px;
+    padding-right: 17px;
 }
+
 .text h4{
   font-size: 20px;
   }
@@ -537,4 +368,6 @@ align-items: center;
   }
 }
 
- */
+.err{
+  color:red;
+}

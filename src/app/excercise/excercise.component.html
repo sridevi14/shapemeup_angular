@@ -1,0 +1,35 @@
+
+<main>
+      
+      <div class="container p-5" style="text-align: center;">
+<label for="cars">Workout Categories</label>
+<input type="text"placeholder="search"/>
+
+
+
+
+</div>
+
+
+  <div class="boxes_Excercise"  *ngIf="items.length>0">
+
+  <div class="dropdown" *ngFor="let item of items" >
+     {{item.name}} 
+                  <div class="  dropdown_content">
+                  <p class="mt-5" style="color: white"> </p>
+                  <p class="mt-5" style="color: white"></p>
+                        </div>
+                       </div>
+            
+             
+     
+      
+ </div>
+
+
+
+
+      
+          </main>
+
+
