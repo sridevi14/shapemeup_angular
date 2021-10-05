@@ -15,7 +15,8 @@ import { SignupComponent } from './signup/signup.component';
 import { ExcerciseComponent } from './excercise/excercise.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
-
+import { YouTubePlayerModule } from "@angular/youtube-player";
+//import { VideoComponent } from './video.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -30,7 +31,8 @@ import{ItemService} from './services/item.service';
     MobileComponent,
     LoginComponent,
     SignupComponent,
-    ExcerciseComponent
+    ExcerciseComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import{ItemService} from './services/item.service';
     ReactiveFormsModule,
    AngularFireDatabaseModule,
   AngularFireModule.initializeApp(environment.firebase,'shapmeup'),
-  AngularFirestoreModule
+  AngularFirestoreModule,
+  YouTubePlayerModule,
   ],
     
 

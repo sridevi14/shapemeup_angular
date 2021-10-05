@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { YouTubePlayerModule } from "@angular/youtube-player";
 
 import {ItemService} from '../services/item.service';
 
@@ -8,7 +9,10 @@ import {ItemService} from '../services/item.service';
   styleUrls: ['./excercise.component.css']
 })
 export class ExcerciseComponent implements OnInit {
-items:any[];
+
+
+items:any[]=[];
+  name:any;
   constructor(private itemService:ItemService) { }
 
   ngOnInit(): void {
@@ -16,7 +20,23 @@ items:any[];
     this.itemService.getItems().subscribe(items => {
       console.log(items);
       this.items = items;
+     
     });
+   
   }
+
+  Search(){
+if(this.name == ""){
+  this.ngOnInit();
+  
+}
+else if(this.name==this.name){
+  this.items=this.items.filter(res =>{
+    return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+  });
+}
+  }
+
+
 
 }

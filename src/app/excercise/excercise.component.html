@@ -3,7 +3,8 @@
       
       <div class="container p-5" style="text-align: center;">
 <label for="cars">Workout Categories</label>
-<input type="text"placeholder="search"/>
+<input type="text"placeholder="search" name="name" [(ngModel)]="name" (ngModelChange)="  Search()
+      " />
 
 
 
@@ -16,14 +17,27 @@
   <div class="dropdown" *ngFor="let item of items" >
      {{item.name}} 
                   <div class="  dropdown_content">
-                  <p class="mt-5" style="color: white"> </p>
-                  <p class="mt-5" style="color: white"></p>
+                      
+                  <p class="mt-5 video" style="color: white"> 
+                        <youtube-player 
+                        videoId="GYAB4Td62zI" 
+                        suggestedQuality="highres" 
+                        [height]=200 
+                        [width]="400" 
+                        [startSeconds]="4"
+                        [endSeconds]="8">
+                      </youtube-player> 
+       
+                  </p>
+                 
+                  <!-- <p class="mt-5" style="color: white"></p> -->
+           
                         </div>
                        </div>
             
              
-     
-      
+                     
+                      
  </div>
 
 

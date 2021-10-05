@@ -10,7 +10,6 @@ body{
 
 
 
-
 .box{
     background: #FEEFA8;
 margin-top: 100px;
@@ -37,11 +36,11 @@ margin-top: 100px;
 
 .product_1 p{
 text-align: left;
-font-size: 17px;
+font-size: 50px;
 margin-bottom: 100px;
 }
 .product_1 h3{
-  font-size: 30px;
+  font-size: 50px;
 }
 .product_2{
   background: #34383D;
@@ -175,30 +174,44 @@ text-align: center;
 
  .mobile_1,.mobile_5{
   background-color: #34383D;
-
+  font-size: 20px;
  }
 
  .mobile_box{
    display:none;
+   font-size: 20px;
  }
+ .mobile_text2{
+  font-size: 20px;
+ }
+ .mobile_text2 .text2_1{
+  font-size: 20px; 
+ }
+ .text3_1{
+  font-size: 20px; 
+}
+ 
 
  .mobile_3{
   background: linear-gradient(99.33deg, #FEEFA8 0.55%, #F5E383 108.61%);
-
+  font-size: 20px;
  }
  .mobile_text1,.mobile_text3,.mobile_text5{
    align-items: center;
    text-align: center;
+   font-size: 20px;
    
  }
 .mobile_text1 .text1_1,.mobile_text5 .text5_1{
   color: #FEEFA8;
+  font-size: 20px;
 
 }
 .mobile_text1 .text1_2,.mobile_text5 .text5_2{
   color:white;
   line-height: 1.4em;
   padding-top:5px;
+  font-size: 20px;
 
 
 }
@@ -299,16 +312,18 @@ top: 195px;
 .mobile,.mobile2,.mobile3,.mobile4,.mobile5{
   align-items: center;
    text-align: center;
+   font-size: 20px;
 }
 
 .mobile_text2{
   align-items: center;
   text-align: center;
+  font-size: 20px;
  
 }
 
 .mobile_text2 .text2_2,.mobile_text3 .text3_2{
-
+  font-size: 20px;
   padding-top:10px;
 }
 
