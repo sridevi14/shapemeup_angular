@@ -1,0 +1,98 @@
+<div class="eventHeader">
+  <ion-grid class="date-container">
+    <ion-row>
+      <ion-col class="ion-text-center ">
+        <!--         <ion-grid>
+          <ion-row>
+            <ion-col size="5">
+              <div class="ion-text-end date">24</div>
+            </ion-col>
+            <ion-col size="7">
+              <div class="ion-text-start day">Wed</div>
+              <div class="ion-text-start year">Jan 2021</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid> -->
+        <ion-datetime class="custom-datepicker" [(ngModel)]="selectedDate" [min]="minimumDate">
+        </ion-datetime>
+
+      </ion-col>
+      <ion-col class="ion-text-end">
+        <ion-button color="primary">Today</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-text-center" size="3">Time</ion-col>
+      <!--       <ion-col class="ion-text-end" size="8">
+        <ion-icon name="caret-up-sharp"></ion-icon>
+      </ion-col> -->
+    </ion-row>
+  </ion-grid>
+</div>
+<div class="eventContainer">
+  <ion-grid *ngIf="upcomingEvents.length > 0">
+    <ion-row *ngFor="let appointment of upcomingEvents">
+      <ion-col size="3">
+        <div class="timing">
+          <!--           <div>{{ appointment.fromTime }}</div>
+          <div>{{ appointment.toTime }}</div> -->
+        </div>
+      </ion-col>
+      <ion-col size="0.1" class="vertical-seperator">
+      </ion-col>
+      <ion-col size="8">
+        <div class="first-activity-container  activity-container ">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="11">
+                <!--                 <span class="activity-header ">{{ appointment.eventName }}</span> -->
+                <div class="client-details">
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col size="4">
+                        <ion-icon class="client-icon" name="person-circle"></ion-icon>
+                      </ion-col>
+                      <ion-col size="8">
+                        <!--                         <div class="client-name">{{ appointment.clientDetails.name }}</div> -->
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </div>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <!--   <div class="payment_remainder divSpacing">
+    <div>Payment Remainder</div>
+    <div>Client 1</div>
+    <div>Client 2</div>
+  </div>
+  <div class="container">
+    <div class="time_plan inlineElemnt">
+      <div class="diet_timePlan timing">
+        <div>11:35 AM</div>
+        <div>11:15 AM</div>
+      </div>
+      <div class="workout_timePlan timing">
+        <div>11:35 AM</div>
+        <div>11:15 AM</div>
+      </div>
+    </div>
+    <div class="diet_workout inlineElemnt">
+      <div class="diet_plan divSpacing dietWorkoutContainer">
+        Diet Plan
+      </div>
+      <div class="workout divSpacing dietWorkoutContainer">
+        Workout
+      </div>
+    </div>
+  </div> -->
+</div>

@@ -1,0 +1,76 @@
+<ion-content>
+  <form #surveyForm="ngForm" (ngSubmit)="submit(surveyForm)" novalidate>
+    <ion-grid   *ngIf="surveyQuestions.length > 0">
+      <div [ngClass]="{'disabled': isReadOnly}" class="surveyQuestions" *ngFor="let survey of surveyQuestions; let i = index">
+        <ion-row>
+          <ion-col>
+            <label>{{i +1 }}.) {{survey.question}}<span class="required">*</span>
+              <span *ngIf="survey.type === 'range' && !isReadOnly && survey.answer !== null"> : {{ survey.answer}} </span>
+              <span *ngIf="isReadOnly"  style= "color:white" > : {{ survey.answer}} </span>
+            </label>
+          </ion-col>
+        </ion-row>
+        <div *ngIf="survey.type === 'text' && !isReadOnly">
+          <div class="custom-input">
+            <ion-item lines="full">
+              <ion-input [(ngModel)]="survey.answer" name="ques{{i}}" required #sur="ngModel">
+              </ion-input>
+            </ion-item>
+          </div>
+        </div>
+
+        <div *ngIf="survey.type === 'range' && !isReadOnly">
+          <ion-item>
+            <ion-range [(ngModel)]="survey.answer" name="ques{{i}}" required #sur="ngModel" min="0" max="10" >
+              <ion-label slot="start">0</ion-label>
+              <ion-label slot="end">10</ion-label>
+            </ion-range>
+          </ion-item>
+        </div>
+
+        <div *ngIf="survey.type === 'number' && !isReadOnly">
+          <input type='number' [(ngModel)]="survey.answer" name="ques{{i}}" required #sur="ngModel" />
+        </div>
+
+        <div *ngIf="survey.type === 'file' && !isReadOnly">
+          <input type='file' [(ngModel)]="survey.answer" name="ques{{i}}" required #sur="ngModel" />
+        </div>
+
+        <div class="form-group" *ngIf="survey.type ==='radio' && !isReadOnly">
+          <label *ngFor="let opt of survey.options; let j = index">
+            <input [(ngModel)]="survey.answer" name="ques{{i}}{{j}}" #sur="ngModel" [value]="opt" type="radio" />
+            {{opt}}
+          </label>
+        </div>
+
+        <div class="form-group" *ngIf="survey.type ==='textRadio' && !isReadOnly">
+          <label *ngFor="let opt of survey.options; let j = index">
+            <input [(ngModel)]="survey.answer" name="ques{{i}}{{j}}" #sur="ngModel"   [(ngModel)]="survey.radioInput" [value]="opt" type="radio" />
+            {{opt}}
+          </label>
+
+          <div *ngIf="survey.answer === survey.showTextBoxOn">
+            <div class="custom-input">
+              <ion-item lines="full">
+                <ion-input placeholder="If {{survey.showTextBoxOn}} , Why?" name="ques{{i}}textInput"
+                  [(ngModel)]="survey.conditionalAnswer" required #sur="ngModel">
+                </ion-input>
+              </ion-item>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--       <div *ngIf="surveyForm.sur?.invalid && (surveyForm.sur.dirty || surveyForm.sur.touched)" class="invalid-feedback">
+        <div *ngIf="sur?.errors.required">Please fill all the details</div>
+      </div> -->
+      <ion-row *ngIf="!isReadOnly">
+        <ion-col>
+          <ion-button color="warning" type="submit" class="custom-button">
+            <ion-icon name="save-outline"></ion-icon>submit
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

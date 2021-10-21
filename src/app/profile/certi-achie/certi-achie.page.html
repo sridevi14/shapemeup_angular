@@ -1,0 +1,52 @@
+<ion-header>
+  <app-toolbar headingText="Certifications" backButtonRoute="coach/profile">
+  </app-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="certificateForm" (ngSubmit)="update()" novalidate>
+  <ion-grid>
+    <ion-row><ion-col [size]="8"></ion-col>
+      <ion-col [size]="4"><ion-button class="info">Edit</ion-button></ion-col>
+    </ion-row>
+    <ion-row class="certification-header">Certification 1</ion-row>
+    <ion-row>
+      <ion-col [size]="12">
+        <div class="custom-input">
+          <ion-item lines="full">
+            <ion-input type="text" formControlName="certificate1"></ion-input>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="certification-header">Certification 2</ion-row>
+    <ion-row>
+      <ion-col [size]="12">
+        <div class="custom-input">
+          <ion-item lines="full">
+            <ion-input type="text" formControlName="certificate2"></ion-input>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="certification-header">Certification 3</ion-row>
+    <ion-row>
+      <ion-col [size]="12">
+        <div class="custom-input">
+          <ion-item lines="full">
+            <ion-input type="text" formControlName="certificate3" ></ion-input>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row> <label class="certification-header">Achievements</label></ion-row>
+    <ion-row>
+      <ion-textarea rows="4" formControlName="achievement"></ion-textarea>
+    </ion-row>
+    <ion-row>
+      <ion-col [size]="10">
+        <ion-button type="submit" (click)="update()" class="update">Update</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </form>
+</ion-content>

@@ -18,7 +18,7 @@ items:any[]=[];
   ngOnInit(): void {
     //console.log('ngonitrun');
     this.itemService.getItems().subscribe(items => {
-      console.log(items);
+     // console.log(items);
       this.items = items;
      
     });
@@ -35,6 +35,9 @@ else if(this.name==this.name){
     return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
   });
 }
+
+
+
   }
 
 

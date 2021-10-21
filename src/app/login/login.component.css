@@ -1,0 +1,183 @@
+body{
+    overflow-x: hidden;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .page .check_box {
+    align-content: center;
+    justify-content: center;
+    
+    
+  }
+  .form-check {
+    
+    padding-left: 3.25rem;
+  }
+  .check_box .dotted input{
+    padding:30px;
+  }
+  .check_box .dotted{
+    border:dotted black;
+    padding: 20px;
+    padding-left: 8px;
+    padding-right: 50px;
+    border-radius: 10px;
+  }
+    .page  label{
+      display:table-row;
+  
+    }
+  
+    .sign_up .row{
+  margin:10px;
+    }
+   .name{
+     margin-top:20px;
+   }
+  
+   .name .form-control {
+      
+      width: 79%;
+      height: calc(1.5em + .75rem + 6px);
+    border-radius: 5.25rem;
+     
+  }
+  
+  .bday .form-control {
+      
+    width: 38%;
+    height: calc(1.5em + .75rem + 6px);
+  border-radius: 5.25rem;
+   
+  }
+  
+  .age .form-control {
+      
+    width: 20%;
+    height: calc(1.5em + .75rem + 6px);
+  border-radius: 5.25rem;
+   
+  }
+  
+  .gender{
+    
+  font-weight: bolder;
+  font-size: 17px;
+  }
+  .dotted{
+    border:dotted black;
+    padding: 20px;
+    padding-left: 8px;
+    padding-right: 40px;
+    border-radius: 10px;
+    position: relative;
+  width: max-content;
+  }
+  
+  .phone .form-control {
+      
+    width: 79%;
+    height: calc(1.5em + .75rem + 6px);
+  border-radius: 5.25rem;
+   
+  }
+  
+  .password .form-control {
+      
+    width: 79%;
+    height: calc(1.5em + .75rem + 6px);
+  border-radius: 5.25rem;
+   
+  }
+  
+  
+  .form_elements{
+    justify-content: center;
+  }
+  
+  .sign_up .submit{
+  padding-left:70px;
+  padding-right:70px;
+  background: #34383D;
+  border-radius: 5.25rem;
+  color:white;
+  padding-top:10px;
+  padding-bottom:10px;
+  }
+  
+  
+  .sign_up .submit:active{
+    outline: none;
+  }
+  
+  
+  
+  @media  (max-width: 767px) {
+    
+  
+  .form-check {
+      padding-left: 53px;
+      padding-right: 17px;
+  }
+  
+  .text h4{
+    font-size: 20px;
+    }
+  
+  
+  
+  .check_box{
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+    
+  }
+   
+   @media screen and (max-width: 510px){
+      .name .form-control, .phone .form-control,.password .form-control{
+        
+        width: 100%;
+        height: calc(1.5em + .75rem + 6px);
+      border-radius: 5.25rem;
+       
+    }
+    .form-check {
+      padding-left: 31px;
+    }
+    .page {
+      display:initial;
+    }
+    
+    
+    .btn{
+      font-size:15px;
+    
+    }
+    
+    
+  }
+  
+  .err{
+    color:red;
+  }
+
+
+  form .row{
+    justify-content: center;
+    text-align: -moz-center;
+  }
+  .align_prop{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }

@@ -1,9 +1,9 @@
 
     
-      <nav class="navbar mat-elevation-z8" >
+      <nav class="navbar mat-elevation-z8 desktop" >
         <div class="nav-container">
           <div class="nav_brand">
-          <div  class="nav-logo" routerLink="/">
+          <div  class="nav-logo" routerLink="/" >
             SHAPEMEUP
         </div>
          </div>
@@ -12,18 +12,18 @@
           <ul class= "nav-menu" *ngIf="showMe">
             <li class="nav-item">
               
-               <a class="nav-links" routerLink="mobile">Apps</a> 
+               <a class="nav-links" routerLink="mobile" >Apps</a> 
               
             </li>
             <li class="nav-item">
               
-             <a class="nav-links" routerLink="about">About</a>   
+             <a class="nav-links" routerLink="about" >About</a>   
              
             </li>
 
             <li class="nav-item">
               
-             <a class="nav-links" routerLink="excercise">  Excercise
+             <a class="nav-links" routerLink="excercise" >  Excercise
             </a> 
             </li>
            
@@ -46,25 +46,95 @@
           <ul class="nav-menu2" *ngIf="showMe">
             <li class="nav-item">
               
-              <a class="nav-links login " routerLink="login">Log In</a>  
+              <a class="nav-links login " routerLink="login" >Log In</a>  
               
             </li>
 
             <li class="nav-item">
               
-<a class="nav-links" routerLink="signup">Sign Up</a>
+<a class="nav-links" routerLink="signup" >Sign Up</a>
             
             </li>
          </ul>
          </div>
           <div class="nav-icon" >
           
-            <i class= "fas fa-times" (click)="toggleTag()"><mat-icon>menu</mat-icon></i>
+            <i  (click)="toggleTag()"><mat-icon>menu</mat-icon></i>
+           
           </div>
         </div>
       </nav>
   
-    
+      <!-- class= "fas fa-times" -->
 
 
 
+
+      <nav class="navbar mat-elevation-z8 mobile_view"  >
+        <div class="nav-container ">
+          <div class="nav_brand ">
+          <div  class="nav-logo " routerLink="/" (click)="toggleTag2()">
+            SHAPEMEUP
+        </div>
+         </div>
+         
+<div class="nav_links" >
+          <ul class= "nav-menu" *ngIf="showMe2">
+            <li class="nav-item">
+              
+               <a class="nav-links" routerLink="mobile" (click)="toggleTag2()">Apps</a> 
+              
+            </li>
+            <li class="nav-item">
+              
+             <a class="nav-links" routerLink="about" (click)="toggleTag2()">About</a>   
+             
+            </li>
+
+            <li class="nav-item">
+              
+             <a class="nav-links" routerLink="excercise" (click)="toggleTag2()">  Excercise
+            </a> 
+            </li>
+           
+            <!-- <li class="nav-item">
+             
+              <a class="nav-links" routerLink="diet">Diet</a>  
+              
+            </li> -->
+
+            <li class="nav-item">
+              
+          <a class="nav-links" routerLink="coach" (click)="toggleTag2()">  Coach
+        </a>  
+            </li>
+
+           
+            </ul>
+         
+         
+          <ul class="nav-menu2" *ngIf="showMe2">
+            <li class="nav-item log">
+              
+              <a class="nav-links logins " routerLink="login" (click)="toggleTag2()">LogIn</a>  
+              
+            </li>
+
+            <li class="nav-item">
+              
+<a class="nav-links" routerLink="signup" (click)="toggleTag2()">SignUp</a>
+            
+            </li>
+         </ul>
+         </div>
+          <div class="nav-icon" >
+          
+            <i  (click)="toggleTag2()" class="toggle" ><mat-icon  class="togle" style="margin-top: 3px;">menu</mat-icon></i>
+           
+          </div>
+        </div>
+      </nav>
+  
+     
+     
+     

@@ -1,1 +1,60 @@
-<p>login works!</p>
+<main class="container page">
+
+    <div class="sign_up">
+     
+  
+       <form class="mt-5" [formGroup]="loginForm" (ngSubmit)="logIn()">
+           <div class="align_prop">
+         
+   
+       
+    
+   
+      
+         <div class="row phone">
+        
+           <div class="form-group col-lg-6">
+             <label for="exampleFormControlInput1">Email*</label>
+             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" 
+             
+             name="email"  formControlName="email" 
+             />
+   
+             <div *ngIf="!loginForm.controls.email.valid && loginForm.controls.email &&
+             loginForm.controls.email.dirty" class="validator-error">
+                 Please enter a valid email.
+               </div>
+   
+   
+           </div>
+         </div>
+    
+   
+         <div class="row password">
+     <div class="form-group col-lg-6">
+     <label for="inputPassword">Password*</label>
+     <input type="password" class="form-control" id="inputPassword" placeholder="Password"
+    
+     name="password" formControlName="password"
+       />
+       
+       <div *ngIf="!loginForm.controls.password.valid && loginForm.controls.password &&
+       loginForm.controls.password.dirty" class="validator-error">
+         Please enter password.
+       </div>
+   
+   
+     </div>
+    
+      </div>  
+    </div>
+         <br/><br/>
+         <div class=" col-12 mb-5 Registeration" style="text-align: center;">
+           <button type="submit" class="btn btn submit">LOG-IN</button>
+           
+         </div>
+       </form>
+   
+     </div>
+     
+   </main>

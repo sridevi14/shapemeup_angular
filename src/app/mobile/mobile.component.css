@@ -34,143 +34,15 @@ margin-top: 100px;
   
 }
 
-.product_1 p{
-text-align: left;
-font-size: 50px;
-margin-bottom: 100px;
-}
-.product_1 h3{
-  font-size: 50px;
-}
-.product_2{
-  background: #34383D;
-
-  z-index: -7;
-  position: relative;
-}
 
 
-
-.biss_module,.coach_module,.client_module{
-  text-align: left;
-padding-top:60px ;
-
- }
-
- .coach_module p{
-   padding-bottom:100px;
- }
- .coach_module{
-   margin-top:100px;
- }
 
  
  
 
-.biss_module h4::before{
-   content:"";
-/* background-image: url(./Rectangle1.png); */
-width: 481px;
-height: 700px;
-position:absolute;
- background-repeat: no-repeat;
- z-index: -5;
- top: -436px;
- left: -30px;
 
-} 
-
- .coach_module h4::before{
-  content:"";
-/* background-image: url(./Rectangle2.png); */
-width: 481px;
-height: 700px;
-position: absolute;
-background-repeat: no-repeat;
-z-index: -5;
-top: -263px;
-left: -113px;
-
-}
-
-.client_module h4::before{
-  content:"";
-/* background-image: url(./Rectangle3.png); */
-width: 563px;
-height: 3102px;
-position: absolute;
-background-repeat: no-repeat;
-z-index: -5;
-top: -161px;
-left: -113px;
-
-
-}  
-
-
-
-.product_2 p{
-  color:white;
-  font-size:18px;
-}
-
-.client_module h4{
-  color: #FEEFA8;
-
-}
-
-
- .coach_module .coach_text{
-   align-self: center;
- }
  
 
-.box_1 ,.box_3 ,.box_6, .box_8{
-  background: #FEEFA8;
-align-items: center;
-  padding:20px;
-text-align: center;
-  box-sizing: content-box;
-  width:200px;
-  height:200px;
-  display: flex;
-  margin:10px;
-align-items: center;
-justify-content: center;
-}
-
-
-.box_2 ,.box_4 ,.box_5, .box_7{
-  background: #34383D;
-display: flex;
-align-items: center;
-justify-content: center;
-  padding:20px;
-  color:white;
-text-align: center;
-  box-sizing: content-box;
-  width:200px;
-  margin:10px;
-  height:200px;
-}
-
- .container label{
-   padding: 15px;
-   font-weight: bolder;
- }
-
-.container select{
-  width:400px;
-  height:30px;
-}
-
-.boxes_coach p{
- font-size: 15px;
-}
-
-.boxes_coach h5{
-  font-size: 17px;
- }
 
  .mobile_1,.mobile_5{
   background-color: #34383D;
@@ -181,9 +53,7 @@ text-align: center;
    display:none;
    font-size: 20px;
  }
- .mobile_text2{
-  font-size: 20px;
- }
+ 
  .mobile_text2 .text2_1{
   font-size: 20px; 
  }
@@ -199,7 +69,7 @@ text-align: center;
  .mobile_text1,.mobile_text3,.mobile_text5{
    align-items: center;
    text-align: center;
-   font-size: 20px;
+  
    
  }
 .mobile_text1 .text1_1,.mobile_text5 .text5_1{
@@ -211,7 +81,7 @@ text-align: center;
   color:white;
   line-height: 1.4em;
   padding-top:5px;
-  font-size: 20px;
+  font-size: 17px;
 
 
 }
@@ -312,126 +182,19 @@ top: 195px;
 .mobile,.mobile2,.mobile3,.mobile4,.mobile5{
   align-items: center;
    text-align: center;
-   font-size: 20px;
+  
 }
 
 .mobile_text2{
   align-items: center;
   text-align: center;
-  font-size: 20px;
+ 
  
 }
 
 .mobile_text2 .text2_2,.mobile_text3 .text3_2{
-  font-size: 20px;
+  font-size: 17px;
   padding-top:10px;
-}
-
-.page .check_box {
-  align-content: center;
-  justify-content: center;
-  
-  
-}
-.form-check {
-  
-  padding-left: 3.25rem;
-}
-.check_box .dotted input{
-  padding:30px;
-}
-.check_box .dotted{
-  border:dotted black;
-  padding: 20px;
-  padding-left: 8px;
-  padding-right: 50px;
-  border-radius: 10px;
-}
-  .page  label{
-    display:table-row;
-
-  }
-
-  .sign_up .row{
-margin:10px;
-  }
- .name{
-   margin-top:20px;
- }
-
- .name .form-control {
-    
-    width: 79%;
-    height: calc(1.5em + .75rem + 6px);
-  border-radius: 5.25rem;
-   
-}
-
-.bday .form-control {
-    
-  width: 38%;
-  height: calc(1.5em + .75rem + 6px);
-border-radius: 5.25rem;
- 
-}
-
-.age .form-control {
-    
-  width: 20%;
-  height: calc(1.5em + .75rem + 6px);
-border-radius: 5.25rem;
- 
-}
-
-.gender{
-  
-font-weight: bolder;
-font-size: 17px;
-}
-.dotted{
-  border:dotted black;
-  padding: 20px;
-  padding-left: 8px;
-  padding-right: 40px;
-  border-radius: 10px;
-  position: relative;
-width: max-content;
-}
-
-.phone .form-control {
-    
-  width: 79%;
-  height: calc(1.5em + .75rem + 6px);
-border-radius: 5.25rem;
- 
-}
-
-.password .form-control {
-    
-  width: 79%;
-  height: calc(1.5em + .75rem + 6px);
-border-radius: 5.25rem;
- 
-}
-
-
-.form_elements{
-  justify-content: center;
-}
-
-.sign_up .submit{
-padding-left:70px;
-padding-right:70px;
-background: #34383D;
-border-radius: 5.25rem;
-color:white;
-padding-top:10px;
-padding-bottom:10px;
-}
-
-
-.sign_up .submit:active{
-  outline: none;
 }
 
 .text h4{
@@ -466,11 +229,7 @@ font-size: 20px;
 
 }
 
-.check_box{
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-}
+
   
 }
  
@@ -492,12 +251,7 @@ font-size: 20px;
   .mobile_box{
     display:block;
   }
-  .navbar .nav-item .nav-link{
-    
-    padding:19px;
-   
-   
-}
+ 
  
   
 } 

@@ -9,9 +9,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  // minmumAgeRequired: 14,
-  // urlRegEx: '',
-  production: true,
+  minmumAgeRequired: 14,
+  urlRegEx: '',
+  production: false,
   firebase: {
     apiKey: "AIzaSyAdAQ4pq3069yw0a-9MnyWoH8VFUYAwlTI",
 
@@ -31,7 +31,9 @@ export const environment = {
 
 
 
-  }
+  },
+
+  fcmServer: 'AAAAcKYEA9o:APA91bGK6MBTO39jUgeZ1YXP3zhK7W-J7xIq2ZqzL59LWVHi6sm0-hoXn1LpJz1ybkvH943xQeq0UZLA0qcGFLDBf3jatqZh61k9Zq8LluBuG66keiy__zCVcj63JfRkR0G8pU1PZYxg'
 
 };
 

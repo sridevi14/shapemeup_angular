@@ -1,0 +1,32 @@
+<ion-row *ngIf="!showSearchIcon">
+  <ion-col size="10">
+    <ion-searchbar placeholder="Search" (ionChange)="searchItems($event)" class="text"></ion-searchbar>
+  </ion-col>
+  <ion-col size="1" class="vertical-center">
+    <ion-icon class="sort" name="caret-down" (click)="sortItem('desc')" *ngIf="sortOrder === 'asc'">
+    </ion-icon>
+    <ion-icon class="sort" name="caret-up" (click)="sortItem('asc')" *ngIf="sortOrder === 'desc'">
+    </ion-icon>
+  </ion-col>
+  <ion-col size="1" class="vertical-center" *ngIf="showAddNewIcon">
+    <ion-icon class="add" name="add-circle-sharp" (click)="clickEvent.emit({type: 'addNew',value:''})"></ion-icon>
+  </ion-col>
+</ion-row>
+
+<div class="card-container">
+  <ng-container *ngIf="filteredItemList.length > 0">
+    <ng-container *ngFor="let item of filteredItemList">
+      <ion-row class="cards-list">
+        <ion-col size="10">
+          {{item.name}}
+        </ion-col>
+        <ion-col size="2" class="ion-text-end" *ngIf="eventType || showSearchIcon">
+          <a (click)="clickEvent.emit({type: eventType,value: item})">
+            <ion-icon [name]="eventIcon"></ion-icon>
+          </a>
+        </ion-col>      
+      </ion-row>
+
+    </ng-container>
+  </ng-container>
+</div>

@@ -1,0 +1,30 @@
+<app-toolbar backButtonRoute="/coach/profile" headingText="Account Setting" [showProfileIcon]=false></app-toolbar>
+
+<ion-content>
+  <div class="content-container">
+    <form [formGroup]="accountDetailsForm" (ngSubmit)="update()" novalidate>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Current Password</ion-label>
+        <ion-input formControlName="currentpassword" type="password" #phoneNumber required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">New Password</ion-label>
+        <ion-input formControlName="newpassword" type="password" #email required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Re-enter New Password</ion-label>
+        <ion-input formControlName="confirmpassword" type="password" #password required></ion-input>
+      </ion-item>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block">Update</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

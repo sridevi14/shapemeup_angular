@@ -1,0 +1,122 @@
+.eventHeader {
+    background-color: #3F4348;
+    color: #FAE373;
+    height: 20%;
+}
+
+.custom-datepicker {
+    .datetime-text {
+        display: none;
+    }
+}
+
+
+.date-container {
+/*     background-color: #34383D; */
+    color: #F6F6F5;
+    padding: 5%;
+
+    .date {
+        font-size: 2.25rem;
+    }
+
+    .day , .year {
+        font-size: 1rem;
+    }
+}
+
+.eventContainer {
+    background-color: #3F4348;
+    height: 80%;
+    padding-left: 5%;
+    overflow: auto;
+
+    .activity-container {
+        min-height: 110px;
+        border-radius: 16px;
+        background-color:  #F6F6F5;
+    }
+
+    .first-activity-container{
+        background-color: #FAE373;
+    }
+
+}
+
+.vertical-seperator {
+    border-left: 1px solid #FAF9F9;
+}
+
+.timing {
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+.activity-header {
+    font-size: 1rem;
+    color: #34383D;
+    padding-left: 12px;
+}
+
+.client-details {
+    padding-top: 16px;
+}
+
+.client-icon {
+    font-size: 3rem;
+}
+
+.client-name {
+    padding-top: 1rem;
+}
+
+/* 
+.eventContainer div {
+    margin-bottom: 10px;
+}
+.upcoming_eve {
+    padding: 5px;
+    color: #FFFFFF;
+}
+.payment_remainder {
+    background-color: #F2994A;
+}
+.divSpacing {
+    padding: 10px;
+    border-radius: 16px;
+}
+.diet_workout {
+    width: 77%;
+    padding-left: 15px;
+    border-left: 1px solid #FAF9F9;
+}
+.dietWorkoutContainer {
+    min-height: 110px;
+}
+.timing {
+    color: #FFFFFF;
+    font-size: 10px;
+    height: 65px;
+}
+.time_plan {
+    width: 22%;
+}
+.inlineElemnt {
+    display: inline-block;
+}
+.diet_plan {
+    background-color: #FAE373;
+}
+.diet_timePlan {
+    padding-top: 12px;
+}
+.workout {
+    background-color: #F6F6F5;
+    margin: 10px 0px;
+}
+.btnAdd {
+    background-image: "../../assets/Vector.png";
+} */

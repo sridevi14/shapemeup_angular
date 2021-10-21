@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header">
+      <div class="header_text">
+        <div *ngIf="!leftCustomEvent" class="back-icon" (click)="backClicked()">
+          <ion-icon *ngIf="backButtonRoute" name="chevron-back"></ion-icon>
+        </div>
+        <div *ngIf="leftCustomEvent" class="back-icon" (click)="leftCustomEventClick.emit()">
+          <ion-icon name="{{leftCustomEvent}}"></ion-icon>
+        </div>
+        <!--   <ion-title>Title Only</ion-title> -->
+        <div>{{headingText}}</div>
+      </div>
+      <ion-icon *ngIf="rightCustomEvent" name="{{rightCustomEvent}}" (click)="rightCustomEventClick.emit()"></ion-icon>
+      <div class="vertical-center">
+        <ion-icon [routerLink]="profileRoute" *ngIf="showProfileIcon" class="profile-icon " name="person-circle">
+        </ion-icon>
+        <span *ngIf="!showProfileIcon && customEventText">{{customEventText}}</span>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,168 @@
+<app-toolbar backButtonRoute="/coach/profile" headingText="Demographics" [showProfileIcon]=false></app-toolbar>
+
+<ion-content>
+  <div class="content-container">
+    <form *ngIf="personalInfoForm" [formGroup]="personalInfoForm" (ngSubmit)="update()" novalidate>
+
+      <div class="custom-input">
+        <ion-label>First Name <span class="required">*</span></ion-label>
+        <ion-item lines="full">
+          <ion-input formControlName="firstName" type="text" #firstName required></ion-input>
+        </ion-item>
+        <div
+          *ngIf="!personalInfoForm.controls.firstName.valid && personalInfoForm.controls.firstName && personalInfoForm.controls.firstName.dirty"
+          class="validator-error">
+          <span *ngIf="personalInfoForm.controls.firstName.errors.required">Please enter First Name.</span>
+          <span *ngIf="personalInfoForm.controls.firstName.errors.minlength">First Name Should be atleast 3
+            Characters</span>
+          <span *ngIf="personalInfoForm.controls.firstName.errors.maxlength">First Name has limit of 35
+            Characters</span>
+          <span
+            *ngIf="personalInfoForm.controls.firstName.errors.pattern && !personalInfoForm.controls.firstName.errors.maxlength && !personalInfoForm.controls.firstName.errors.minlength">First
+            Name can have only Alphabets</span>
+        </div>
+      </div>
+
+      <div class="custom-input">
+        <ion-label>Last Name <span class="required">*</span> </ion-label>
+        <ion-item lines="full">
+          <ion-input formControlName="lastName" type="text" #lastName required></ion-input>
+        </ion-item>
+        <div
+          *ngIf="!personalInfoForm.controls.lastName.valid && personalInfoForm.controls.lastName && personalInfoForm.controls.lastName.dirty"
+          class="validator-error">
+          <span *ngIf="personalInfoForm.controls.lastName.errors.required">Please Enter Last Name.</span>
+          <span *ngIf="personalInfoForm.controls.lastName.errors.minlength">Last Name Should be atleast 3
+            Characters</span>
+          <span *ngIf="personalInfoForm.controls.lastName.errors.maxlength">Last Name has limit of 35
+            Characters</span>
+          <span
+            *ngIf="personalInfoForm.controls.lastName.errors.pattern && !personalInfoForm.controls.lastName.errors.maxlength && !personalInfoForm.controls.lastName.errors.minlength">
+            Last Name can have only Alphabets</span>
+        </div>
+      </div>
+
+      <div class="custom-input">
+        <ion-label>Nick Name <span class="required">*</span> </ion-label>
+        <ion-item lines="full">
+          <ion-input formControlName="nickName" type="text" #nickName required></ion-input>
+        </ion-item>
+        <div
+          *ngIf="!personalInfoForm.controls.nickName.valid && personalInfoForm.controls.nickName && personalInfoForm.controls.nickName.dirty"
+          class="validator-error">
+          <span *ngIf="personalInfoForm.controls.nickName.errors.required">Please enter Nick Name.</span>
+          <span *ngIf="personalInfoForm.controls.nickName.errors.minlength">Nick Name Should be atleast 3
+            Characters</span>
+          <span *ngIf="personalInfoForm.controls.nickName.errors.maxlength">Nick Name has limit of 35
+            Characters</span>
+          <span
+            *ngIf="personalInfoForm.controls.nickName.errors.pattern && !personalInfoForm.controls.nickName.errors.maxlength && !personalInfoForm.controls.lastName.errors.minlength">
+            Nick Name can have only Alphabets</span>
+        </div>
+      </div>
+
+      <div class="custom-input">
+        <ion-label> Date of Birth <span class="required">*</span></ion-label>
+        <ion-item lines="full">
+          <ion-datetime displayFormat="DD/MMM/YYYY" placeholder="DD/MMM/YYYY" formControlName="dateofBirth" #dateOfBirth
+            required display-timezone="utc"></ion-datetime>
+        </ion-item>
+        <div
+          *ngIf="!personalInfoForm.controls.dateofBirth.valid && personalInfoForm.controls.dateofBirth && personalInfoForm.controls.dateofBirth.dirty"
+          class="validator-error">
+          Please enter Date of Birth.
+        </div>
+      </div>
+
+      <div class="custom-input">
+        <ion-label>Gender <span class="required">*</span>
+        </ion-label>
+        <div class="custom-radio">
+          <ion-row>
+            <ion-col>
+              <label class="input-values">
+                <input type="radio" value="Male" formControlName="gender">
+                <span>Male</span>
+              </label>
+            </ion-col>
+            <ion-col>
+              <label class="input-values">
+                <input type="radio" value="Female" formControlName="gender">
+                <span>Female</span>
+              </label>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div
+          *ngIf="!personalInfoForm.controls.gender.valid && personalInfoForm.controls.gender && personalInfoForm.controls.gender.dirty"
+          class="validator-error">
+          Please select Gender.
+        </div>
+      </div>
+
+      <!--       <ion-item lines="full">
+        <ion-label>First Name: </ion-label>
+        <ion-input formControlName="firstName" type="text" #firstName required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label>Last Name:</ion-label>
+        <ion-input formControlName="lastName" type="text" #lastName required></ion-input>
+      </ion-item> -->
+
+      <!--       <ion-item lines="full">
+        <ion-label>Nick Name:</ion-label>
+        <ion-input formControlName="nickName" type="text"></ion-input>
+      </ion-item> -->
+
+      <!--       <ion-item lines="full">
+        <ion-label>Date of Birth:</ion-label>
+        <ion-datetime formControlName="dateofBirth" #dateOfBirth required display-timezone="utc"></ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label>Gender:</ion-label>
+        <ion-select formControlName="gender" placeholder="Select One">
+          <ion-select-option value="f">Female</ion-select-option>
+          <ion-select-option value="m">Male</ion-select-option>
+        </ion-select>
+      </ion-item> -->
+
+      <div class="custom-input">
+        <ion-label>Address <span class="required">*</span>
+        </ion-label>
+        <ion-item>
+          <ion-label position="stacked"></ion-label>
+          <ion-input placeholder="Address Line 1" formControlName="addressLine1"></ion-input>
+          <ion-input placeholder="Address Line 2" formControlName="addressLine2"></ion-input>
+          <ion-input placeholder="City" formControlName="city"></ion-input>
+          <ion-input placeholder="State" formControlName="state"></ion-input>
+          <ion-input placeholder="Zip Code" formControlName="zipcode"></ion-input>
+        </ion-item>
+        <div class="validator-error">
+          <span *ngIf="!personalInfoForm.controls.addressLine1.valid && personalInfoForm.controls.addressLine1.dirty">
+            Address Line 1 can have alphabets ,numbers and '&' '-' '#'
+          </span>
+          <span *ngIf="!personalInfoForm.controls.addressLine2.valid && personalInfoForm.controls.addressLine2.dirty">
+            Address Line 2 can have alphabets ,numbers and '&' '-' '#'
+          </span>
+          <span *ngIf="!personalInfoForm.controls.city.valid && personalInfoForm.controls.city.dirty">
+            City can have only can have alphabets
+          </span>
+          <span *ngIf="!personalInfoForm.controls.state.valid && personalInfoForm.controls.state.dirty">
+            State can have only can have alphabets
+          </span>
+          <span *ngIf="!personalInfoForm.controls.zipcode.valid && personalInfoForm.controls.zipcode.dirty">
+            Invalid Zipcode
+          </span>
+        </div>
+      </div>
+
+      <ion-row>
+        <ion-col>
+          <ion-button color="menu" type="submit" (click)="update()" expand="block">Update</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

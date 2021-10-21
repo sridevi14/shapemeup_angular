@@ -1,152 +1,6 @@
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
- 
-
- 
- 
-
-
-
- 
-
-
-
-
-
-
-
-
- 
- 
-
-
-
 body{
   overflow-x: hidden;
 }
-
- .container label{
-   padding: 15px;
-   font-weight: bolder;
- }
-
-.container select{
-  width:400px;
-  height:30px;
-}
-
-.boxes_coach p{
- font-size: 15px;
-}
-
-.boxes_coach h5{
-  font-size: 17px;
- }
-
- .mobile_1,.mobile_5{
-  background: #34383D;
-
- }
-
- .mobile_box{
-   display:none;
- }
-
- .mobile_3{
-  background: linear-gradient(99.33deg, #FEEFA8 0.55%, #F5E383 108.61%);
-
- }
- .mobile_text1,.mobile_text3,.mobile_text5{
-   align-items: center;
-   text-align: center;
-   
- }
-.mobile_text1 .text1_1,.mobile_text5 .text5_1{
-  color: #FEEFA8;
-
-}
-.mobile_text1 .text1_2,.mobile_text5 .text5_2{
-  color:white;
-  line-height: 1.4em;
-  padding-top:5px;
-
-
-}
-
-
-
-
-.mobile_1{
-  position: relative;
-  z-index: 5;
-}
-
-
-.mobile_2{
-  position: relative;
-  z-index: 5;
-}
-.mobile_3{
-  position: relative;
-  z-index: 7;
-}
-
-.mobile_4{
-  position: relative;
-  z-index:5;
-}
-
-.mobile_5{
-  position: relative;
-  z-index:2;
-}
-
-
-
-
-
-
-
-.frontpage{
-  overflow-x: hidden;
-}
-
-.image_button{
- position: relative;
- left:-133px;
-}
-.mobile,.mobile2,.mobile3,.mobile4,.mobile5{
-  align-items: center;
-   text-align: center;
-}
-
-.mobile_text2{
-  align-items: center;
-  text-align: center;
- 
-}
-
-.mobile_text2 .text2_2,.mobile_text3 .text3_2{
-
-  padding-top:10px;
-}
-
 .page .check_box {
   align-content: center;
   justify-content: center;
@@ -254,39 +108,18 @@ padding-bottom:10px;
   outline: none;
 }
 
-.text h4{
-font-size: 20px;
-}
+
 
 @media  (max-width: 767px) {
   
-  .biss_module h4::before{
-    width: 0px;
-  }
-  .client_module h4::before{
-    width:0px;
-  }
-  .coach_module h4::before{
-  width:0px;
-  }
-.biss_module h4,.coach_module h4{
-  color: #FEEFA8;
-}
+  
 
 .form-check {
     padding-left: 53px;
     padding-right: 17px;
 }
 
-.text h4{
-  font-size: 20px;
-  }
 
-.client_module h4{
-  color:black;
- 
-
-}
 
 .check_box{
   align-items: center;
@@ -296,78 +129,36 @@ font-size: 20px;
   
 }
  
-@media(max-width: 991px) {
-  
-  .coach_module h4::before{
-    left:-197px;
-  }
-  .box{
-    margin-top: 0px;
-  }
-  .text{
 
-    display:none;
-  }
-  .text h4{
-    font-size: 20px;
-    }
-  .mobile_box{
-    display:block;
-  }
-  .navbar .nav-item .nav-link{
-    
-    padding:19px;
-   
-   
-}
- 
-  
-} 
-@media screen and (max-width: 1200px){
-  
 
-  .image_button{
-    position: relative;
-    left: -74px;
-   }
-  
-} 
 
-@media screen and (max-width: 575px){
-  
-  .mobiles_mobile{
-padding-bottom:50px;
-  }
-  
- .page_1{
 
-text-align: center;
-align-self: center;
 
-} 
-.image_button_2{
-  text-align: center;
-  align-self: center;
-align-items: center;
-}
-.mobile_box{
-  
-  text-align: center;
-}
-
-.mobile3::before{
-  left:87px;
-
-}
-}
 
 @media screen and (max-width: 510px){
-  .container input{
-    width:200px;
+  .name .form-control, .phone .form-control,.password .form-control{
     
-  }
+    width: 100%;
+    height: calc(1.5em + .75rem + 6px);
+  border-radius: 5.25rem;
+   
+}
+.form-check {
+  padding-left: 31px;
+}
+.page {
+  display:initial;
 }
 
+
+.btn{
+  font-size:15px;
+
+}
+
+
+
+}
 .err{
   color:red;
 }

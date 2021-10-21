@@ -10,7 +10,7 @@ import {enableProdMode} from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
  showMe : boolean =true;
-  
+ showMe2 : boolean =true;
   constructor() { 
     
   }
@@ -20,6 +20,11 @@ export class NavbarComponent implements OnInit {
   }
 toggleTag(){
   this.showMe=!this.showMe
+  
+}
+toggleTag2(){
+  this.showMe2=!this.showMe2
+  
 }
  
 }

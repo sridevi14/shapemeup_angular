@@ -21,6 +21,29 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import{ItemService} from './services/item.service';
+
+
+
+
+
+
+// import { HTTP_INTERCEPTORS } from '@angular/common/http';
+// //import { NgModule } from '@angular/core';
+// //import { AngularFireModule } from '@angular/fire';
+// //import { AngularFireAuthModule } from '@angular/fire/auth';
+// //import { AngularFireDatabaseModule } from '@angular/fire/database';
+// //import { AngularFirestoreModule } from '@angular/fire/firestore';
+// //import { BrowserModule } from '@angular/platform-browser';
+// // import { RouteReuseStrategy } from '@angular/router';
+//  import { TitleCasePipe } from "@angular/common";
+// //import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+// //import { environment } from 'src/environments/environment';
+// import { HttpClientModule } from '@angular/common/http';
+// //import { AppRoutingModule } from './app-routing.module';
+// //import { AppComponent } from './app.component';
+//  import { LoaderInterceptor } from './_shared/interceptor/loader.interceptor';
+//  import { ServiceWorkerModule } from '@angular/service-worker';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,10 +69,11 @@ import{ItemService} from './services/item.service';
   AngularFireModule.initializeApp(environment.firebase,'shapmeup'),
   AngularFirestoreModule,
   YouTubePlayerModule,
+  
   ],
     
-
-  providers: [ItemService],
+  providers: [
+  ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

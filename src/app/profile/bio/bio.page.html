@@ -1,0 +1,57 @@
+<app-toolbar backButtonRoute="/coach/profile" headingText="Bio" [showProfileIcon]=false></app-toolbar>
+
+
+<ion-content>
+  <div class="content-container">
+    <form [formGroup]="bioDetailsForm" *ngIf="bioDetailsForm" (ngSubmit)="update()" novalidate>
+
+      <div class="custom-input">
+        <ion-label position="stacked">About Me</ion-label>
+        <ion-item>
+          <ion-textarea formControlName="aboutMe"></ion-textarea>
+        </ion-item>
+      </div>
+
+      <div class="custom-input">
+        <ion-label position="stacked">Experience</ion-label>
+        <ion-item>
+          <ion-textarea formControlName="experience"></ion-textarea>
+        </ion-item>
+      </div>
+
+      <div class="custom-input">
+        <ion-label position="stacked">Acheivements</ion-label>
+        <ion-item>
+          <ion-textarea formControlName="acheivements"></ion-textarea>
+        </ion-item>
+      </div>
+
+      <div class="custom-input">
+        <ion-label position="stacked">Certificates </ion-label>
+        <ion-item>
+          <ion-input type="file" accept="image/*" placeholder="Choose Certificate 1" (change)="changeListener($event)">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="file" accept="image/*" placeholder="Choose Certificate 2" (change)="changeListener($event)">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="file" accept="image/*" placeholder="Choose Certificate 3" (change)="changeListener($event)">
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <!--       <ion-item lines="full">
+        <ion-label position="floating">Website</ion-label>
+        <ion-input formControlName="website" type="text"></ion-input>
+      </ion-item> -->
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block">Update</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

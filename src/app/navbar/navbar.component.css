@@ -75,7 +75,7 @@ border-radius: 20px;
   color: black;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  height: 100%;
+  /* height: 100%; */
   border-bottom: 3px solid transparent;
 }
 .fa-code {
@@ -123,20 +123,53 @@ dl, ol, ul {
 
 .nav-icon {
   display: none;
+  
+}
+.mobile_view{
+  display: none;
 }
 
 @media screen and (max-width: 1081px) {
+
+  .desktop{
+    display:none;
+  }
+  .togle{
+    font-size: 30px;
+  }
+
+  .mobile_view{
+    display:flex;
+   
+  }
+.toggle{
+  color:#34383D;
+  align-items: center;
+}
+  
+  .mobile_view .logins{
+
+background-color: #F2994A;
+width:11%  !important;
+height:0px !important;
+border-radius: 10px;
+position: relative;
+padding-left:10px;
+padding-right:10px;
+padding-top:0px;
+padding-bottom:0px;
+  }
   .nav-menu{
     display: flex;
     flex-direction: column;
-    width: 100%;
+ 
     border-top: 1pxsolid #fff;
     position: absolute;
-    top: 61px;
+    top: 50px;
     background: #FEEFA8;
 left:0px;
     opacity: 1;
-    /* left:-110%; */
+    width:80%;
     transition: all 0.5s ease;
   }
 .nav-menu2{
@@ -147,10 +180,9 @@ margin-right: 5rem;
 background: #FEEFA8;
 
 position: absolute;
-top: 528px;
+top: 426px;
 left:0px;
-/* left:-110%; */
-width: 100%;
+width:80%;
 transition: all 0.5s ease;
 }
   .nav-menu.active {
