@@ -5,7 +5,12 @@ body{
   
   
   
-  
+.forgot{
+  background:none;
+  cursor:pointer;
+  color:#0909FF;
+  padding-top:10px;
+}
   
   
   

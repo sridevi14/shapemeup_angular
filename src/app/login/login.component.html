@@ -4,7 +4,7 @@
      
   
        <form class="mt-5" [formGroup]="loginForm" (ngSubmit)="logIn()">
-           <div class="align_prop">
+         
          
    
        
@@ -47,14 +47,16 @@
      </div>
     
       </div>  
-    </div>
-         <br/><br/>
+
+         <br/>
          <div class=" col-12 mb-5 Registeration" style="text-align: center;">
            <button type="submit" class="btn btn submit">LOG-IN</button>
+         <br/>
+         
            <!-- <a href="" (click)="redirect('about')">Forgot Password?</a> -->
-           <button (click)="goToPage('forgot-password')">
+           <p (click)="goToPage('forgot-password')" class="forgot">
             <span>Forgot Password?</span>
-           </button>
+           </p>
          </div>
        </form>
    

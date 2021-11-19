@@ -122,15 +122,20 @@
           <ul class="nav-menu2" *ngIf="showMe2">
             <li class="nav-item log">
               
-              <a class="nav-links logins " routerLink="login" (click)="toggleTag2()">LogIn</a>  
+              <a class="nav-links logins " *ngIf="!authService.isLogged" routerLink="login" (click)="toggleTag2()">LogIn</a>  
               
             </li>
-
             <li class="nav-item">
               
-<a class="nav-links" routerLink="signup" (click)="toggleTag2()">SignUp</a>
+              <a class="nav-links login" *ngIf="authService.isLogged" (click)="authService.SignOut()"  >Log Out</a>   
+                 
+               </li>
+            <li class="nav-item">
+              
+<a class="nav-links" routerLink="signup" *ngIf="!authService.isLogged" (click)="toggleTag2()">SignUp</a>
             
             </li>
+
          </ul>
          </div>
           <div class="nav-icon" >
