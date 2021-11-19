@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
+import{ForgotPasswordComponent} from './forgot-password/forgot-password.component';
+
 //import { DietComponent } from './diet/diet.component';
 import { CoachComponent } from './coach/coach.component';
 import { MobileComponent } from './mobile/mobile.component';
@@ -55,6 +57,8 @@ import{ItemService} from './services/item.service';
     LoginComponent,
     SignupComponent,
     ExcerciseComponent,
+    ForgotPasswordComponent,
+   
    
   ],
   imports: [

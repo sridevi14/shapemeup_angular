@@ -7,7 +7,8 @@ import { CoachComponent } from './coach/coach.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ExcerciseComponent } from './excercise/excercise.component';
-
+import { ForgotPasswordComponent} from './forgot-password/forgot-password.component';
+//import{ForgotComponent} from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {path:'',redirectTo:"/mobile",pathMatch:"full"},
@@ -15,12 +16,13 @@ const routes: Routes = [
   {path:'mobile',component:MobileComponent},
  // {path:'diet',component:DietComponent   },
   {path:'excercise',component:ExcerciseComponent},
+  {path:'forgot-password',component:ForgotPasswordComponent},
   
   {path:'coach',component:CoachComponent},
   
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-
+ 
 
 ];
 

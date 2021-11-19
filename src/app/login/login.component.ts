@@ -18,13 +18,15 @@ export class LoginComponent implements OnInit {
     public profileService: ProfileService,
     //public pushNotificationService: PushNotificationService,
     public ngFireAuth: AngularFireAuth,
-    public router: Router,
+    private router: Router,
     private formBuilder: FormBuilder
   ) { }
-
+  goToPage(pageName:string){
+    this.router.navigate([`${pageName}`]);
+  }
   ngOnInit(): void {
 
-    console.log('test');
+   
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]]
@@ -77,5 +79,9 @@ export class LoginComponent implements OnInit {
         })
     }
   }
+
+ 
+
+  
 
 }
