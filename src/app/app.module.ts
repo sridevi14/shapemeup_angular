@@ -23,6 +23,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import{ItemService} from './services/item.service';
+import { AuthenticationService } from './_shared/service/authentication.service';
 
 
 
@@ -77,7 +78,8 @@ import{ItemService} from './services/item.service';
   ],
     
   providers: [
-  ItemService],
+  ItemService,
+AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

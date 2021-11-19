@@ -1,6 +1,6 @@
 import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import {enableProdMode} from '@angular/core';
-
+import { AuthenticationService } from 'src/app/_shared/service/authentication.service';
   enableProdMode();
  
 @Component({
@@ -11,8 +11,8 @@ import {enableProdMode} from '@angular/core';
 export class NavbarComponent implements OnInit {
  showMe : boolean =true;
  showMe2 : boolean =true;
-  constructor() { 
-    
+  constructor( public authService: AuthenticationService) { 
+   
   }
 
   ngOnInit(){

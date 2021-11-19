@@ -100,6 +100,9 @@ export class AuthenticationService {
             })
     }
 
+  
+    
+
     // Store user in localStorage
     SetUserData(user) {
         const userRef: AngularFirestoreDocument<any> = this.afStore.doc(`users/${user.uid}`);
@@ -127,7 +130,9 @@ export class AuthenticationService {
     async SignOut() {
         return await this.ngFireAuth.signOut().then(() => {
             localStorage.clear();
-            this.router.navigate(['login']);
+            //this.router.navigate(['login']);
+            alert("logout successfully");
+            console.log("ncxn")
         })
     }
 

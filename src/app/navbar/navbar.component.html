@@ -46,13 +46,19 @@
           <ul class="nav-menu2" *ngIf="showMe">
             <li class="nav-item">
               
-              <a class="nav-links login " routerLink="login" >Log In</a>  
+              <a class="nav-links login" *ngIf="!authService.isLogged" routerLink="login" >Log In</a>  
               
             </li>
 
             <li class="nav-item">
               
-<a class="nav-links" routerLink="signup" >Sign Up</a>
+           <a class="nav-links login" *ngIf="authService.isLogged" (click)="authService.SignOut()"  >Log Out</a>   
+              
+            </li>
+
+            <li class="nav-item">
+              
+<a class="nav-links" *ngIf="!authService.isLogged" routerLink="signup" >Sign Up</a>
             
             </li>
          </ul>
