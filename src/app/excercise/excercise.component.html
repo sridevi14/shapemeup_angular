@@ -1,5 +1,5 @@
 
-<main>
+<main  >
       
       <div class="container p-5" style="text-align: center;">
 <label for="cars">Workout Categories</label>
@@ -12,33 +12,34 @@
 </div>
 
 
-  <div class="boxes_Excercise"  *ngIf="items.length>0">
+  <div class="boxes_Excercise"  *ngIf="items.length>0" >
 
-  <div class="dropdown" *ngFor="let item of items" >
+  <div class="dropdown" *ngFor="let item of items"  (click)="Box_Show()">
      {{item.name}} 
-                  <div class="  dropdown_content">
-                      
-                  <p class="mt-5 video" style="color: white"> 
-                        <youtube-player 
-                        videoId="GYAB4Td62zI" 
-                        suggestedQuality="highres" 
-                        [height]=200 
-                        [width]="400" 
-                        [startSeconds]="4"
-                        [endSeconds]="8">
-                      </youtube-player> 
-       
-                  </p>
-                 
-                  <!-- <p class="mt-5" style="color: white"></p> -->
-           
-                        </div>
-                       </div>
-            
+                   
+
+</div>
+</div>
+        
              
                      
-                      
- </div>
+<div class="dropdown_content" *ngIf="showMe" >
+      <mat-icon (click)="Box_Show()" class="box_close">cancel</mat-icon>                
+      <p class="mt-5 video" style="color: white"> 
+            <youtube-player class="youtube"
+            videoId="GYAB4Td62zI" 
+            suggestedQuality="highres" 
+            [height]="200" 
+            [width]="400" 
+            [startSeconds]="4"
+            [endSeconds]="8">
+          </youtube-player> 
+
+      </p>
+     
+   
+            </div>
+                             
 
 
 

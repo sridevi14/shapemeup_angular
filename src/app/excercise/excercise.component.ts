@@ -10,7 +10,7 @@ import {ItemService} from '../services/item.service';
 })
 export class ExcerciseComponent implements OnInit {
 
-
+  showMe : boolean =false;
 items:any[]=[];
   name:any;
   constructor(private itemService:ItemService) { }
@@ -23,6 +23,12 @@ items:any[]=[];
      
     });
    
+  }
+
+
+  Box_Show(){
+    this.showMe=!this.showMe
+    
   }
 
   Search(){
