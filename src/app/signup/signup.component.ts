@@ -43,7 +43,12 @@ export class SignupComponent implements OnInit {
   this.registerForm = this.formBuilder.group({
     firstName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25), Validators.pattern('^[a-zA-Z ]*$')]],
 
+
       
+
+
+
+    
     lastName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25), Validators.pattern('^[a-zA-Z ]*$')]],
     //dateofBirth: ['2002-09-23T15:03:46.789', [Validators.required]],
      gender: ['', [Validators.required]],
