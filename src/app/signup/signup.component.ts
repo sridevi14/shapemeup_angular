@@ -35,9 +35,9 @@ export class SignupComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-  let date = moment.utc().format();
-  moment.default(date).add(environment.minmumAgeRequired, 'year')
-  this.maxDateofBirth = moment.utc(date).local().format();
+  // let date = moment.utc().format();
+  // moment.default(date).add(environment.minmumAgeRequired, 'year')
+  // this.maxDateofBirth = moment.utc(date).local().format();
 
 
   this.registerForm = this.formBuilder.group({
