@@ -26,6 +26,7 @@ import{ItemService} from './services/item.service';
 import { AuthenticationService } from './_shared/service/authentication.service';
 import { ClientProfileComponent } from './client-profile/client-profile.component';
 import { DemographicsComponent } from './demographics/demographics.component';
+import { GoalsComponent } from './goals/goals.component';
 
 
 
@@ -63,6 +64,7 @@ import { DemographicsComponent } from './demographics/demographics.component';
     ForgotPasswordComponent,
     ClientProfileComponent,
     DemographicsComponent,
+    GoalsComponent,
    
    
   ],

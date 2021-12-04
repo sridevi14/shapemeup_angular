@@ -1,0 +1,20 @@
+
+
+   
+    <form [formGroup]="goalForm" (ngSubmit)="update()" novalidate>
+   
+        <button class="info">Edit</button>
+   
+        <p class="header">Fitness Goals<span class="required">*</span></p>
+     
+          <input  rows="4" formControlName="fitness" #fitness required/>
+       
+        <div
+              *ngIf="!goalForm.controls.fitness.valid && goalForm.controls.fitness && goalForm.controls.fitness.dirty"
+              class="validator-error">
+              <div *ngIf="goalForm.controls.fitness.errors.minlength">Must be at least 20 characters!</div>
+              <div *ngIf="goalForm.controls.fitness.errors.maxlength">Maximum 100 characters!</div>
+            </div>
+
+      <button type="submit" class="update">Update</button>
+    </form>

@@ -10,6 +10,9 @@ import { ExcerciseComponent } from './excercise/excercise.component';
 import { ForgotPasswordComponent} from './forgot-password/forgot-password.component';
 import{ClientProfileComponent} from './client-profile/client-profile.component'
 import{DemographicsComponent} from './demographics/demographics.component';
+import{GoalsComponent} from './goals/goals.component';
+
+
 const routes: Routes = [
   {path:'',redirectTo:"/mobile",pathMatch:"full"},
   {path:'about',component:AboutComponent},
@@ -23,7 +26,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'demographics',component:DemographicsComponent},
-
+  {path:'goals',component:GoalsComponent},
 ];
 
 @NgModule({
