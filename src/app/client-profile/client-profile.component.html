@@ -1,0 +1,19 @@
+<div class="profile-header">
+   
+    <mat-icon style="font-size:60px">account_circle</mat-icon>
+    <div class="nick-name">
+      <div style="font-size:30px" *ngIf="coach && coach.firstName">
+        {{coach.firstName}}
+      </div>
+     
+    </div>
+
+    
+  </div>
+<p (click)="goToPage('demographics')" style="cursor:pointer;">demographics</p>
+<p>survey</p>
+<p>goals</p>
+<p>security</p>
+<p>paymenthistory</p>
+<p>contact Us</p>
+<p>logout</p>

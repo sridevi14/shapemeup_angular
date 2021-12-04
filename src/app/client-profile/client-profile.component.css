@@ -1,0 +1,39 @@
+.profile{
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+     font-size:90px; 
+    /* padding:50px; */
+
+        /* padding: 50px; */
+        margin-top: auto;
+        margin-bottom: auto;
+
+}
+
+
+.profile-header {
+    background: #feefa8;
+    color: #3f4348;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    position: relative;
+    padding: 5% 0%;
+    
+  }
+.client_name{
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+     font-size:30px; 
+     margin-top: auto;
+     margin-bottom: auto;
+
+}
+
+.nick-name{
+    font-size:10px;
+}

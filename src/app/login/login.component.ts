@@ -33,13 +33,13 @@ export class LoginComponent implements OnInit {
     });
   
     if (localStorage.getItem('user')) {
-      this.router.navigate(['diet']);
+      // this.router.navigate(['diet']);
     }
     if (localStorage.getItem('userId') && localStorage.getItem('userType')) {
       if (localStorage.getItem('userType') === 'client') {
-        this.router.navigate(['login']);
+        // this.router.navigate(['login']);
       } else {
-        this.router.navigate(['about']);
+        // this.router.navigate(['about']);
       }
     }
 
@@ -62,12 +62,12 @@ export class LoginComponent implements OnInit {
               if (user['userType'] === 'client') {
                 localStorage.setItem('coachId', user.coachID);
                 localStorage.setItem('isUserLoginFirstTime', user.isLoggedInFirstTimeFlag);
-                this.router.navigate(['about']);
+                // alert("successfully logged in");
+               
                 this.loginForm.reset();
-                alert("successfully logged in");
-                
+                this.router.navigate(['profile']);
               } else {
-                this.router.navigate(['mobile']);
+                // this.router.navigate(['mobile']);
               }
             })
           } else {

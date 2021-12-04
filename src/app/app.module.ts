@@ -24,6 +24,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import{ItemService} from './services/item.service';
 import { AuthenticationService } from './_shared/service/authentication.service';
+import { ClientProfileComponent } from './client-profile/client-profile.component';
+import { DemographicsComponent } from './demographics/demographics.component';
 
 
 
@@ -59,6 +61,8 @@ import { AuthenticationService } from './_shared/service/authentication.service'
     SignupComponent,
     ExcerciseComponent,
     ForgotPasswordComponent,
+    ClientProfileComponent,
+    DemographicsComponent,
    
    
   ],
