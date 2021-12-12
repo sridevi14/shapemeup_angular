@@ -22,12 +22,16 @@ import { YouTubePlayerModule } from "@angular/youtube-player";
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+//import{AngularFirestoreModule}from 'angularfire2/storage'
 import{ItemService} from './services/item.service';
 import { AuthenticationService } from './_shared/service/authentication.service';
 import { ClientProfileComponent } from './client-profile/client-profile.component';
-import { DemographicsComponent } from './demographics/demographics.component';
+//import { DemographicsComponent } from './demographics/demographics.component';
 import { GoalsComponent } from './goals/goals.component';
-
+import { AuthGuard } from './_shared/guard/auth.guard';
+import { SurveyComponent } from './client-profile/survey/survey.component';
+import { ClientDemographicsComponent } from './client-profile/client-demographics/client-demographics.component';
+import { ClientPaymentHistoryComponent } from './client-profile/client-payment-history/client-payment-history.component';
 
 
 
@@ -63,8 +67,12 @@ import { GoalsComponent } from './goals/goals.component';
     ExcerciseComponent,
     ForgotPasswordComponent,
     ClientProfileComponent,
-    DemographicsComponent,
+   
     GoalsComponent,
+    SurveyComponent,
+    ClientDemographicsComponent,
+
+    ClientPaymentHistoryComponent,
    
    
   ],
@@ -85,7 +93,9 @@ import { GoalsComponent } from './goals/goals.component';
     
   providers: [
   ItemService,
-AuthenticationService],
+AuthenticationService,
+AuthGuard
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

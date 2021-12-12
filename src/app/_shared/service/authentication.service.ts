@@ -34,14 +34,16 @@ export class AuthenticationService {
 
     // Login in with email/password
     async SignIn(email, password) {
+        alert("logged");
         return await this.ngFireAuth.signInWithEmailAndPassword(email, password)
+      
     }
 
     // Register user with email/password
    RegisterUser(email, password) {
 //console.log(email);
         return  this.ngFireAuth.createUserWithEmailAndPassword(email, password)
-   console.log(email);
+  
     }
 
     
@@ -69,9 +71,12 @@ export class AuthenticationService {
 
     // Returns true when user is looged in
     get isLogged(): boolean {
+        
         const user = JSON.parse(localStorage.getItem('user'));
         return (user !== null && user.emailVerified !== false) ? true : false;
+       
     }
+
 
     // Returns true when user's email is verified
     /*     get isEmailVerified(): boolean {
@@ -130,9 +135,9 @@ export class AuthenticationService {
     async SignOut() {
         return await this.ngFireAuth.signOut().then(() => {
             localStorage.clear();
-            //this.router.navigate(['login']);
+            this.router.navigate(['login']);
             alert("logout successfully");
-            console.log("ncxn")
+            
         })
     }
 

@@ -7,7 +7,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 //import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as moment from 'moment';
-import { ProfileService } from 'src/app/profile/profile.service';
+import { ClientProfileService } from 'src/app/client-profile/client-profile.service';
 import { PhoneCode } from 'src/app/_shared/modals/phone-code.interface';
 //import { AlertService } from 'src/app/_shared/service/alert.service';
 import { AuthenticationService } from 'src/app/_shared/service/authentication.service';
@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
   constructor(
     public authService: AuthenticationService,
    //private alertService: AlertService,
-    public profileService: ProfileService,
+    public profileService: ClientProfileService,
    public router: Router,
     private formBuilder: FormBuilder
   ) { }

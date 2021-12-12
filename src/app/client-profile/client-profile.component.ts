@@ -4,9 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '../_shared/service/authentication.service';
 import { ClientProfileService } from './client-profile.service';
 // import { LoaderService } from 'src/app/_shared/service/loader.service';
-
-
-
+import {Observable} from 'rxjs';
+import {finalize } from 'rxjs/operators';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-client-profile',
@@ -16,6 +16,8 @@ import { ClientProfileService } from './client-profile.service';
 
 
 export class ClientProfileComponent implements OnInit {
+ downloadURL: string;
+  uploadProgress: Observable<number>;
   isInformationShown: boolean = true;
   usertype: string = 'client';
   homeURL = '/trainee'
@@ -25,7 +27,7 @@ export class ClientProfileComponent implements OnInit {
     public authenticationService: AuthenticationService,
     public clientProfileService: ClientProfileService,
     private router: Router,
-
+   private db:AngularFireStorage,
   ) { }
 
   goToPage(pageName:string){
@@ -55,6 +57,46 @@ export class ClientProfileComponent implements OnInit {
   } */
   logout() {
     this.authenticationService.SignOut();
+
   }
+  path:any;
+  name:any;
+  files:any;
+  upload($event){
+   this.path=$event.target.files[0];
+
+  }
+  downloadurl:Observable<any>;
+  url;
+  uploadImage(){
+    console.log(this.path);
+
+const filepath='/images'+Math.random()+this.path.name;
+   const task = this.db.upload(filepath,this.path);
+    const fileRef=this.db.ref(filepath);
+    task.snapshotChanges().pipe(
+      finalize(()=>{
+        
+   this.downloadurl= fileRef.getDownloadURL();
+this.downloadurl.subscribe((url)=>{
+  if(url){
+    this.url=url;
+    // this.files.push(this.path)
+    
+  }
+}
+
+ 
+
+);
+
+
+      })
+    ).subscribe();
+  
+
+
+  }
+
 
 }

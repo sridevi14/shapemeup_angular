@@ -1,4 +1,4 @@
-<div class="profile-header">
+<div>
    
     <mat-icon style="font-size:60px">account_circle</mat-icon>
     <div class="nick-name">
@@ -10,13 +10,19 @@
 
     
   </div>
+  <br>
+  <br>
+  <br>
 <p (click)="goToPage('demographics')" style="cursor:pointer;">demographics</p>
-<p >survey</p>
+<p (click)="goToPage('survey')" style="cursor:pointer;">survey</p>
 <p (click)="goToPage('goals')" style="cursor:pointer;">goals</p>
 <p>security</p>
-<p>paymenthistory</p>
-<p>contact Us</p>
-<p>logout</p>
+<p (click)="goToPage('paymenthistory')" style="cursor:pointer;">payment-history</p>
+<p style="cursor:pointer;">contact Us</p>
+<p (click)="logout()" style="cursor:pointer;">logout</p>
 
+<input type="file" (change)="upload($event)">
+<button (click)="uploadImage()">submit</button>
 
-
+<!-- <a [href]="url">url</a> -->
+<img [src]="url" alt="image" />

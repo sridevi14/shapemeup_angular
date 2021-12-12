@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProfileService } from '../profile/profile.service';
+
+import { ClientProfileService } from 'src/app/client-profile/client-profile.service';
 import{ AuthenticationService } from '../_shared/service/authentication.service';
 //import { PushNotificationService } from '../_shared/service/p//ush-notification.service';
 @Component({
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   constructor(
     public authService: AuthenticationService,
-    public profileService: ProfileService,
+    public profileService: ClientProfileService,
     //public pushNotificationService: PushNotificationService,
     public ngFireAuth: AngularFireAuth,
     private router: Router,
@@ -62,10 +63,11 @@ export class LoginComponent implements OnInit {
               if (user['userType'] === 'client') {
                 localStorage.setItem('coachId', user.coachID);
                 localStorage.setItem('isUserLoginFirstTime', user.isLoggedInFirstTimeFlag);
-                // alert("successfully logged in");
+                this.router.navigate(['profile']); 
+               // alert("successfully logged in");
                
                 this.loginForm.reset();
-                this.router.navigate(['profile']);
+              
               } else {
                 // this.router.navigate(['mobile']);
               }
