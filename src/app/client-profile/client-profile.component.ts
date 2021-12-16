@@ -7,7 +7,7 @@ import { ClientProfileService } from './client-profile.service';
 import {Observable} from 'rxjs';
 import {finalize } from 'rxjs/operators';
 import { AngularFireStorage } from '@angular/fire/storage';
-
+import { User,Image } from 'src/app/_shared/modals/user.interface';
 @Component({
   selector: 'app-client-profile',
   templateUrl: './client-profile.component.html',
@@ -17,11 +17,14 @@ import { AngularFireStorage } from '@angular/fire/storage';
 
 export class ClientProfileComponent implements OnInit {
  downloadURL: string;
-  uploadProgress: Observable<number>;
+userDetails: User;
+uploadProgress: Observable<number>;
   isInformationShown: boolean = true;
   usertype: string = 'client';
   homeURL = '/trainee'
   coach: any;
+  urls:any;
+profileImg:any;
   constructor(
     private formBuilder: FormBuilder,
     public authenticationService: AuthenticationService,
@@ -40,7 +43,7 @@ export class ClientProfileComponent implements OnInit {
       if (isLoggedIn) {
         this.clientProfileService.getUser().subscribe(user => {
           this.coach = user;
-          console.log(this.coach);
+         // console.log(this.coach);
          
           
         })
@@ -51,6 +54,9 @@ export class ClientProfileComponent implements OnInit {
       this.homeURL = '/coach'
       
     }
+
+
+   
   }
   /* showInformation(clickedusertype:string ){
     this.usertype = clickedusertype;
@@ -59,6 +65,7 @@ export class ClientProfileComponent implements OnInit {
     this.authenticationService.SignOut();
 
   }
+ 
   path:any;
   name:any;
   files:any;
@@ -69,9 +76,9 @@ export class ClientProfileComponent implements OnInit {
   downloadurl:Observable<any>;
   url;
   uploadImage(){
-    console.log(this.path);
+   // console.log(this.path);
 
-const filepath='/images'+Math.random()+this.path.name;
+const filepath=this.path.name;
    const task = this.db.upload(filepath,this.path);
     const fileRef=this.db.ref(filepath);
     task.snapshotChanges().pipe(
@@ -80,9 +87,34 @@ const filepath='/images'+Math.random()+this.path.name;
    this.downloadurl= fileRef.getDownloadURL();
 this.downloadurl.subscribe((url)=>{
   if(url){
-    this.url=url;
+    this.urls=url;
     // this.files.push(this.path)
+
+  
+
+  let image: Image = {
+    photoURL:this.urls,
+     }
+    this.clientProfileService.updateUsers(image).then(data => {
+  
+    });
     
+    this.clientProfileService.profileDetails.subscribe(async details => {
+      if (details) {
+        this.userDetails = details;
+          
+        //this.loaderService.showLoader(false);
+      } else {
+ 
+        this.clientProfileService.getUser().subscribe(userDetails =>{
+          this.userDetails = userDetails;
+        this.profileImg=this.userDetails.photoURL;
+
+       
+        })}
+      })
+
+   
   }
 }
 
@@ -93,9 +125,8 @@ this.downloadurl.subscribe((url)=>{
 
       })
     ).subscribe();
-  
-
-
+ 
+   
   }
 
 

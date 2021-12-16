@@ -16,13 +16,13 @@
 <p (click)="goToPage('demographics')" style="cursor:pointer;">demographics</p>
 <p (click)="goToPage('survey')" style="cursor:pointer;">survey</p>
 <p (click)="goToPage('goals')" style="cursor:pointer;">goals</p>
-<p>security</p>
-<p (click)="goToPage('paymenthistory')" style="cursor:pointer;">payment-history</p>
+<p (click)="goToPage('client-security')" style="cursor:pointer;">security</p>
+<p (click)="goToPage('payment-history')" style="cursor:pointer;">payment-history</p>
 <p style="cursor:pointer;">contact Us</p>
 <p (click)="logout()" style="cursor:pointer;">logout</p>
 
 <input type="file" (change)="upload($event)">
 <button (click)="uploadImage()">submit</button>
 
-<!-- <a [href]="url">url</a> -->
-<img [src]="url" alt="image" />
+ <a [href]="profileImg">url</a> 
+ <img [src]="profileImg" alt="image" />  

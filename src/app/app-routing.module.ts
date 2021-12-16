@@ -16,6 +16,8 @@ import { AuthGuard } from './_shared/guard/auth.guard';
 import { SurveyComponent } from './client-profile/survey/survey.component';
 import { ClientPaymentHistoryComponent } from './client-profile/client-payment-history/client-payment-history.component';
 import { ClientDemographicsComponent } from './client-profile/client-demographics/client-demographics.component';
+import { ClientSecurityComponent } from './client-profile/client-security/client-security.component';
+import { ResetPasswordComponent } from './client-profile/client-security/reset-password/reset-password.component';
 const routes: Routes = [
   {path:'',redirectTo:"/mobile",pathMatch:"full"},
   {path:'about',component:AboutComponent},
@@ -30,7 +32,20 @@ const routes: Routes = [
 
 },
 {
-  path:'paymenthistory',
+  path:'reset-password',
+component:ResetPasswordComponent,
+canActivate:[AuthGuard]
+
+},
+
+{
+  path:'client-security',
+component:ClientSecurityComponent,
+canActivate:[AuthGuard]
+
+},
+{
+  path:'payment-history',
 component:ClientPaymentHistoryComponent,
 canActivate:[AuthGuard]
 

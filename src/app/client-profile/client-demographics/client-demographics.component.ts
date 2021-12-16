@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
+import { DatePipe, Location } from '@angular/common';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ClientProfileService } from  'src/app/client-profile/client-profile.service';
 import { User, Address } from 'src/app/_shared/modals/user.interface';
@@ -14,7 +14,10 @@ import { User, Address } from 'src/app/_shared/modals/user.interface';
 export class ClientDemographicsComponent implements OnInit {
 
   personalInfoForm: FormGroup;
+
+ 
   userDetails: User;
+  maxdate:any;
   constructor(
     private _location: Location,
     public clientProfileService: ClientProfileService,
@@ -35,9 +38,36 @@ export class ClientDemographicsComponent implements OnInit {
         this.clientProfileService.getUser().subscribe(userDetails =>{
           this.userDetails = userDetails;
           this.buildForm(userDetails);
+
+
+
+
+          var dateofbirth:any= this.userDetails.dateofBirth;
+          var date2 = new Date(dateofbirth);
+          var maxdate:any=date2.getDate();
+          var maxMonth:any=date2.getMonth()+1;
+          
+
+          var year:any=date2.getFullYear();
+          
+
+          if(maxdate<10){
+            maxdate='0'+ maxdate;
+          }
+          
+          if(maxMonth<10){
+            maxMonth='0'+ maxMonth;
+          }
+
+          maxdate= year + '-' + maxMonth + '-' + maxdate;
+          console.log(maxdate);
+              
+               
         });
         //this.loaderService.showLoader(false);
       }
+
+  
     })
   }
 
@@ -45,7 +75,7 @@ export class ClientDemographicsComponent implements OnInit {
     this.personalInfoForm = this.formBuilder.group({
       firstName: [this.userDetails.firstName, [Validators.required, Validators.minLength(3), Validators.maxLength(25), Validators.pattern('^[a-zA-Z ]*$')]],
      lastName: [this.userDetails.lastName, [Validators.required, Validators.minLength(3), Validators.maxLength(25), Validators.pattern('^[a-zA-Z ]*$')]],
-     // dateofBirth: [this.userDetails.dateofBirth, [Validators.required]],
+     dateofBirth: [this.userDetails.dateofBirth, [Validators.required]],
       gender: [this.userDetails.gender, [Validators.required]],
     // phoneCode: [this.userDetails.phoneCode, [Validators.required]],
       // phoneNumber: [this.userDetails.phoneNumber, [Validators.required, Validators.pattern('[0-9]+'), Validators.minLength(10), Validators.maxLength(10)]],
@@ -55,8 +85,10 @@ export class ClientDemographicsComponent implements OnInit {
       // addressLine2: [details.address ? details.address.addressLine2 : null],
      city: [details.address ? details.address.city : null, Validators.pattern('^[a-zA-Z ]*$')],
      state: [details.address ? details.address.state : null, Validators.pattern('^[a-zA-Z ]*$')],
-       zipcode: [details.address ? details.address.zipcode : null, [Validators.minLength(6), Validators.maxLength(6), Validators.pattern('[0-9]+')]]
+       zipcode: [details.address ? details.address.zipcode : null, [Validators.minLength(6), Validators.maxLength(6), Validators.pattern('[0-9]+')]],
+      
     });
+    
   }
 
   backClicked() {
@@ -64,10 +96,11 @@ export class ClientDemographicsComponent implements OnInit {
   }
 
   async update() {
+    
     if (this.personalInfoForm.valid) {
       this.userDetails.firstName = this.personalInfoForm.value.firstName;
       this.userDetails.lastName = this.personalInfoForm.value.lastName;
-    //  this.userDetails.dateofBirth = this.personalInfoForm.value.dateofBirth;
+    this.userDetails.dateofBirth = this.personalInfoForm.value.dateofBirth;
        this.userDetails.nickName = this.personalInfoForm.value.nickName;
        this.userDetails.gender = this.personalInfoForm.value.gender;
        this.userDetails.email = this.personalInfoForm.value.email;

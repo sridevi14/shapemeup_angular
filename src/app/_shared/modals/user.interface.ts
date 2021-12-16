@@ -54,3 +54,7 @@ export interface Address {
     state?: string;
     zipcode?: string;
 }
+
+export interface Image{
+    photoURL?: string;  
+}

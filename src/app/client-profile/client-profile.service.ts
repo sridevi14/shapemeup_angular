@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { User } from '../_shared/modals/user.interface';
+import { User, Image } from '../_shared/modals/user.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -18,11 +18,23 @@ export class ClientProfileService {
     return this.firestore.collection('users').add(user);
   }
 
-  async updateUser(user: User) {
+  async updateUser(userdetail: User) {
+    await this.firestore.doc('users/' + localStorage.getItem('userId')).update(userdetail);
+    //this.router.navigate(['coach'])
+    alert("updated");
+    
+  }
+
+
+ async updateUsers(user: Image) {
     await this.firestore.doc('users/' + localStorage.getItem('userId')).update(user);
     //this.router.navigate(['coach'])
     alert("updated");
+    
   }
+ 
+
+  
 
   deleteUser(userID: string) {
     this.firestore.doc('users/' + userID).delete();

@@ -155,8 +155,8 @@ export class SignupComponent implements OnInit {
      
       .then(async (res) => {
           let formValues = this.registerForm.value;
-          delete formValues.password;
-          delete formValues.confirmPassword;
+        delete formValues.password;
+         delete formValues.confirmPassword;
           
           //TODO
           formValues.userType = 'client';

@@ -93,8 +93,29 @@
     </div>
   </div>
 
+  <div class="custom-input">
+    <label>date of birth<span class="required">*</span></label>
+    
+      <input formControlName="dateofBirth" type="text" />
+  
+    
+      <div class="custom-input">
+        <label> Date of Birth <span class="required">*</span></label>
+       
+          <input displayFormat="DD/MMM/YYYY" placeholder="DD/MMM/YYYY" formControlName="dateofBirth" #dateOfBirth
+            required display-timezone="utc"/>
+      
+        <!-- <div
+          *ngIf="!personalInfoForm.controls.dateofBirth.valid && personalInfoForm.controls.dateofBirth && personalInfoForm.controls.dateofBirth.dirty"
+          class="validator-error">
+          Please enter Date of Birth.
+        </div> -->
+      </div>
+    
+      
+      </div>
 
- 
+  
 
       <div class="custom-input">
         <label>Gender <span class="required">*</span>
