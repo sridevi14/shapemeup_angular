@@ -55,6 +55,25 @@ export interface Address {
     zipcode?: string;
 }
 
-export interface Image{
+export interface Images{
     photoURL?: string;  
+    id?:string;
+}
+
+
+export interface SecurityQuestion {
+   
+    question1?: any;
+    question2?: any;
+    question3?: any;
+    answer1?: any;
+    answer2?: any;
+    answer3?: any;
+   answer?:any;
+ 
+   
+    email: string;
+  
+   
+
 }

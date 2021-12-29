@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument }
   from 'angularfire2/firestore';
 import {items} from '../models/item';
+
 import { Observable } from 'rxjs/Observable';
 
 @Injectable({
@@ -10,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 export class ItemService {
  // itemsCollection: AngularFirestoreCollection<Item>;
  items: Observable<any[]>;
-
+survey: Observable<any[]>
 
   constructor(public afs: AngularFirestore) {
     this.items = this.afs.collection('workouts').valueChanges();
@@ -20,5 +21,6 @@ export class ItemService {
   getItems() {
     return this.items;
   }
-}
 
+  
+}

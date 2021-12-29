@@ -7,7 +7,8 @@ import { ClientProfileService } from './client-profile.service';
 import {Observable} from 'rxjs';
 import {finalize } from 'rxjs/operators';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { User,Image } from 'src/app/_shared/modals/user.interface';
+import { User,Images } from 'src/app/_shared/modals/user.interface';
+
 @Component({
   selector: 'app-client-profile',
   templateUrl: './client-profile.component.html',
@@ -56,6 +57,22 @@ profileImg:any;
     }
 
 
+
+    this.clientProfileService.profileDetails.subscribe(async details => {
+      if (details) {
+        this.userDetails = details;
+          
+        //this.loaderService.showLoader(false);
+      } else {
+ 
+        this.clientProfileService.getUser().subscribe(userDetails =>{
+          this.userDetails = userDetails;
+        this.profileImg=this.userDetails.photoURL;
+       })}
+      })
+
+
+    
    
   }
   /* showInformation(clickedusertype:string ){
@@ -91,36 +108,16 @@ this.downloadurl.subscribe((url)=>{
     // this.files.push(this.path)
 
   
-
-  let image: Image = {
-    photoURL:this.urls,
-     }
-    this.clientProfileService.updateUsers(image).then(data => {
-  
-    });
+    let image: Images = {
+      photoURL:this.urls,
+       }
+      this.clientProfileService.updateUsers(image).then(data => {
     
-    this.clientProfileService.profileDetails.subscribe(async details => {
-      if (details) {
-        this.userDetails = details;
-          
-        //this.loaderService.showLoader(false);
-      } else {
- 
-        this.clientProfileService.getUser().subscribe(userDetails =>{
-          this.userDetails = userDetails;
-        this.profileImg=this.userDetails.photoURL;
-
-       
-        })}
-      })
-
-   
+      });
+      
+    
   }
-}
-
- 
-
-);
+});
 
 
       })
@@ -129,5 +126,14 @@ this.downloadurl.subscribe((url)=>{
    
   }
 
+
+
+
+
+
+
+
+
+  
 
 }

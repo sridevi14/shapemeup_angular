@@ -31,14 +31,13 @@ export class GoalsComponent implements OnInit {
   }
 
   async update() {
-        //console.log(this.goalForm.value);
+      
    
    // await this.loaderService.showLoader(true);
     this.profileService.updateUser(this.goalForm.value).then(data => {
      // this.loaderService.showLoader(false);
 
-      //this.alertService.presentAlert('Goals Updated Successfully', '/coach/profile/goals');
-      //alert("updated");
+     
     });
   }
 

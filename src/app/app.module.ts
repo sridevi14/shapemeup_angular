@@ -18,6 +18,7 @@ import { ExcerciseComponent } from './excercise/excercise.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import { YouTubePlayerModule } from "@angular/youtube-player";
+
 //import { VideoComponent } from './video.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';

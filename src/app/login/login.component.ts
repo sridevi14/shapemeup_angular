@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required]]
     });
   
-    if (localStorage.getItem('user')) {
+    if (localStorage.getItem('user')) {   
       // this.router.navigate(['diet']);
     }
     if (localStorage.getItem('userId') && localStorage.getItem('userType')) {
@@ -59,12 +59,13 @@ export class LoginComponent implements OnInit {
               localStorage.setItem('userId', user.id);
               localStorage.setItem('userType', user.userType);
               this.authService.isLoggedIn.next(true);
+               alert("successfully logged in");
               // this.pushNotificationService.initPush();
               if (user['userType'] === 'client') {
                 localStorage.setItem('coachId', user.coachID);
                 localStorage.setItem('isUserLoginFirstTime', user.isLoggedInFirstTimeFlag);
                 this.router.navigate(['profile']); 
-               // alert("successfully logged in");
+              
                
                 this.loginForm.reset();
               
@@ -77,7 +78,7 @@ export class LoginComponent implements OnInit {
             return false;
           }
         }).catch((error) => {
-          window.alert(error.message)
+          //window.alert(error.message)
         })
     }
   }

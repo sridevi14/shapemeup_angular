@@ -1,6 +1,11 @@
 <div>
-   
-    <mat-icon style="font-size:60px">account_circle</mat-icon>
+   <br/><br/>
+    <!-- <mat-icon style="font-size:60px">account_circle</mat-icon> -->
+
+    <a [href]="profileImg" ><img [src]="profileImg" alt="image" style="border-radius: 50%;width:200px;height:200px;"/>  </a>
+    <!-- <Image
+    [src]="profileImg"
+  ></Image> -->
     <div class="nick-name">
       <div style="font-size:30px" *ngIf="coach && coach.firstName">
         {{coach.firstName}}
@@ -10,9 +15,7 @@
 
     
   </div>
-  <br>
-  <br>
-  <br>
+  
 <p (click)="goToPage('demographics')" style="cursor:pointer;">demographics</p>
 <p (click)="goToPage('survey')" style="cursor:pointer;">survey</p>
 <p (click)="goToPage('goals')" style="cursor:pointer;">goals</p>
@@ -24,5 +27,5 @@
 <input type="file" (change)="upload($event)">
 <button (click)="uploadImage()">submit</button>
 
- <a [href]="profileImg">url</a> 
- <img [src]="profileImg" alt="image" />  
+ <!-- <a [href]="profileImg">url</a>  -->
+ 

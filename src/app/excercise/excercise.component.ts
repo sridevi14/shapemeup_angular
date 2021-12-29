@@ -12,6 +12,7 @@ export class ExcerciseComponent implements OnInit {
 
   showMe : boolean =false;
 items:any[]=[];
+question:any[]=[];
   name:any;
   constructor(private itemService:ItemService) { }
 

@@ -1,1 +1,31 @@
-<p>survey works!</p>
+
+  
+        <button class="info">Edit</button>
+    
+    <div class="month-info">
+    
+          <label>June 2021</label>
+     </div>
+    <div *ngFor="let no of week">
+  <div class="menu-items">
+      
+            <div class="card-name">{{no.Date}}</div>
+       
+              <!-- <ion-icon class="ion-justify-content-end" routerLink="/coach/clients/weeklysurvey" name="chevron-forward-outline"></ion-icon> -->
+</div>
+  </div>
+  <div class="month-info">
+ 
+        <label>May 2021</label>
+     
+  </div>
+  <div *ngFor="let no of weeks">
+  <div class="menu-items">
+
+          <div class="card-name">{{no.Date}}</div>
+        
+            <!-- <ion-icon class="ion-justify-content-end" routerLink="/coach/clients/weeklysurvey" name="chevron-forward-outline"></ion-icon> -->
+   
+  </div>
+ 
+</div>

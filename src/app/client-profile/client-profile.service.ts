@@ -3,15 +3,17 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { User, Image } from '../_shared/modals/user.interface';
+import { User, Images,SecurityQuestion} from '../_shared/modals/user.interface';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientProfileService {
-
+id:any;
   public profileDetails = new BehaviorSubject<User>(null);
-  constructor(private firestore: AngularFirestore, public router: Router) {
+  constructor(private firestore: AngularFirestore, public router: Router
+    ) {
   }
 
   createUser(user: User) {
@@ -24,15 +26,22 @@ export class ClientProfileService {
     alert("updated");
     
   }
-
-
- async updateUsers(user: Image) {
+ 
+ async updateUsers(user: Images) {
     await this.firestore.doc('users/' + localStorage.getItem('userId')).update(user);
     //this.router.navigate(['coach'])
-    alert("updated");
+    alert("profile image uploaded");
     
+ }
+  
+
+ async SecurityQuestion(user: SecurityQuestion) {
+   await this.firestore.doc('securityQuestion/'+localStorage.getItem('userId')).set(user);
+   
+    alert("updated");
   }
- 
+    
+
 
   
 
@@ -53,4 +62,23 @@ export class ClientProfileService {
       )
   }
 
+  getUsers() {
+    const workoutsDocuments = this.firestore.collection<any>('securityQuestion');
+    return workoutsDocuments.snapshotChanges()
+      .pipe(
+        map(changes => changes.map(({ payload: { doc } }) => {
+          const data = doc.data();
+          const id = doc.id
+          return { id, ...data };
+        })),
+        map((sree) => sree.find(doc => doc.email === localStorage.getItem('userEmail')))
+      )
+  }
+
+
+ ;
+
+
+
+  
 }

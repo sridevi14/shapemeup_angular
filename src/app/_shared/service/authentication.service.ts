@@ -4,7 +4,8 @@ import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { User } from '../modals/user.interface';
 import { BehaviorSubject } from 'rxjs';
-
+import 'firebase/auth';
+import firebase from 'firebase/app';
 @Injectable({
     providedIn: 'root'
 })
@@ -34,7 +35,7 @@ export class AuthenticationService {
 
     // Login in with email/password
     async SignIn(email, password) {
-        alert("logged");
+      
         return await this.ngFireAuth.signInWithEmailAndPassword(email, password)
       
     }
@@ -63,6 +64,14 @@ export class AuthenticationService {
             }).catch((error) => {
                 window.alert(error)
             })
+    }
+
+    async SignIns(email, password) {
+      
+        
+       // return await this.ngFireAuth.signInWithEmailAndPassword(email, password)
+    
+    
     }
 
     currentUserData() {

@@ -1,62 +1,25 @@
 
-    <form [formGroup]="securityForm" (ngSubmit)="update()" novalidate>
+    <form  *ngIf="securityForm" [formGroup]="securityForm"  novalidate>
   
-      <h3 class="security-header">Security Question 1<span class="required">*</span>
-      </h3>
+   
+         
+  <label>question1</label>
+  <input type="text"  formControlName="answer1">
+    
 
-              <!-- <ion-select formControlName="question1" placeholder="Choose your security question">
-                <ion-select-option><option>Question1</option></ion-select-option>
-                <ion-select-option><option>Question2</option></ion-select-option>
-                <ion-select-option><option>Question3</option></ion-select-option>
-                <ion-select-option><option>Question4</option></ion-select-option>
-              </ion-select> -->
-              <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-    
-              <input type="text" formControlName="answer1" placeholder="Answer"/>
-          
-  
-    
-      <h3 class="security-header">Security Question 2<span class="required">*</span>
-      </h3>
         
-              <!-- <ion-select formControlName="question2" placeholder="Choose your security question">
-                <ion-select-option><option>Question1</option></ion-select-option>
-                <ion-select-option><option>Question2</option></ion-select-option>
-                <ion-select-option><option>Question3</option></ion-select-option>
-                <ion-select-option><option>Question4</option></ion-select-option>
-              </ion-select> -->
-            
-              <input type="text" formControlName="answer3" placeholder="Answer"/>
-      <!-- <div *ngIf="!securityForm.controls.question2.valid && securityForm.controls.question2 &&
-                    securityForm.controls.question2.dirty" class="validator-error">
-                  Please select any question.
-                </div> -->
-      
-            
-      <h3 class="security-header">Security Question 3<span class="required">*</span></h3>
+  <label>question2</label>
+  <input type="text" formControlName="answer2" >       
+  
+       
+  <label>question3</label>
+  <input type="text" formControlName="answer3">
     
-              <!-- <ion-select formControlName="question3" placeholder="Choose your security question">
-                <ion-select-option><option>Question1</option></ion-select-option>
-                <ion-select-option><option>Question2</option></ion-select-option>
-                <ion-select-option><option>Question3</option></ion-select-option>
-                <ion-select-option><option>Question4</option></ion-select-option>
-              </ion-select> -->
-          
-              <input type="text" formControlName="answer3" placeholder="Answer"/>
-           
-      <!-- <div *ngIf="!securityForm.controls.question3.valid && securityForm.controls.question3 &&
-                    securityForm.controls.question3.dirty" class="validator-error">
-                  Please select any question.
-                </div> -->
-      <button type="submit" (click)="update()">Update</button>
+      <button type="submit" (click)="save()">save</button>
  
     
         <p (click)="goToPage('reset-password')" style="cursor: pointer;">Password Reset</p>
       
-          
+   
+   
     </form>
