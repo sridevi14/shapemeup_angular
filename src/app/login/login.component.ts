@@ -67,10 +67,10 @@ export class LoginComponent implements OnInit {
                 this.router.navigate(['profile']); 
               
                
-                this.loginForm.reset();
+               this.loginForm.reset();
               
               } else {
-                // this.router.navigate(['mobile']);
+                this.router.navigate(['home']);
               }
             })
           } else {

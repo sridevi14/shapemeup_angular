@@ -18,6 +18,13 @@ import { ClientPaymentHistoryComponent } from './client-profile/client-payment-h
 import { ClientDemographicsComponent } from './client-profile/client-demographics/client-demographics.component';
 import { ClientSecurityComponent } from './client-profile/client-security/client-security.component';
 import { ResetPasswordComponent } from './client-profile/client-security/reset-password/reset-password.component';
+import { HomeComponent } from './home/home.component';
+
+import { DietplanListComponent } from './home/dietplan/dietplan-list/dietplan-list.component';
+import { DietplanTemplateComponent } from './home/dietplan/dietplan-template/dietplan-template.component';
+import { DietplanComponent } from './home/dietplan/dietplan.component';
+import { DietCreateComponent } from './home/dietplan/diet-create/diet-create.component';
+
 const routes: Routes = [
   {path:'',redirectTo:"/mobile",pathMatch:"full"},
   {path:'about',component:AboutComponent},
@@ -51,12 +58,24 @@ canActivate:[AuthGuard]
 
 },
   {path:'coach',component:CoachComponent},
-  
+  {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'demographics',component:ClientDemographicsComponent,
   canActivate:[AuthGuard]
 },
+
+
+{path:'dietplan-list',component:DietplanListComponent},
+{path:'diet-create',component:DietCreateComponent},
+{
+  path: 'diet-edit/:id',
+  component: DietCreateComponent
+},
+{path:'dietplan',component:DietplanComponent},
+{path:'dietplan-template',component:DietplanTemplateComponent},
+
+
   {path:'goals',component:GoalsComponent},
   {path:'survey',component:SurveyComponent,
   canActivate:[AuthGuard]

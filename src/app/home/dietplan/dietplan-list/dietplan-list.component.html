@@ -1,0 +1,41 @@
+
+
+    <div class="ion-text-end">
+      <button class="nav-buttons" (click)="goToPage('dietplan-template')" color="primary"> Manage
+        Templates</button>
+    </div>
+ 
+
+  
+      <!-- <ion-searchbar placeholder="Search" (ionChange)="searchItems($event)" class="text"></ion-searchbar> -->
+  
+   
+      <mat-icon class="sort" name="caret-down" (click)="sortItem('desc')" *ngIf="sortOrder === 'asc'">swap_vert</mat-icon> 
+      
+      <mat-icon class="sort" name="caret-up" (click)="sortItem('asc')" *ngIf="sortOrder === 'desc'">swap_vert
+      </mat-icon> 
+  
+      <mat-icon class="add" name="add-circle-sharp" (click)="goToPage('diet-create')">add</mat-icon> 
+     <a (click)="goToPage('diet-create')" >ccncdnm</a>
+
+  <div class="content-container" *ngIf="groupedSelectedItems.length !== 0">
+    <div class="list-container">
+      <div *ngFor="let item of groupedSelectedItems">
+
+ 
+            {{item.name}}
+        
+            <a (click)="viewDietPlanDetails(item.id)">
+
+              clickme
+            </a>
+
+            </div>
+    </div>
+  </div>
+
+  
+
+  <div *ngIf="dietPlanList.length ==0" class="no-category-selected">
+    <label class="secondary">No Food Items Added</label>
+  </div>

@@ -35,27 +35,17 @@ import { ClientDemographicsComponent } from './client-profile/client-demographic
 import { ClientPaymentHistoryComponent } from './client-profile/client-payment-history/client-payment-history.component';
 import { ClientSecurityComponent } from './client-profile/client-security/client-security.component';
 import { ResetPasswordComponent } from './client-profile/client-security/reset-password/reset-password.component';
+import { HomeComponent } from './home/home.component';
+import { DietplanComponent } from './home/dietplan/dietplan.component';
+import { WorkoutsComponent } from './home/workouts/workouts.component';
+
+import { DietplanListComponent } from './home/dietplan/dietplan-list/dietplan-list.component';
+import { DietplanTemplateComponent } from './home/dietplan/dietplan-template/dietplan-template.component';
+import { DietCreateComponent } from './home/dietplan/diet-create/diet-create.component';
 
 
 
 
-
-// import { HTTP_INTERCEPTORS } from '@angular/common/http';
-// //import { NgModule } from '@angular/core';
-// //import { AngularFireModule } from '@angular/fire';
-// //import { AngularFireAuthModule } from '@angular/fire/auth';
-// //import { AngularFireDatabaseModule } from '@angular/fire/database';
-// //import { AngularFirestoreModule } from '@angular/fire/firestore';
-// //import { BrowserModule } from '@angular/platform-browser';
-// // import { RouteReuseStrategy } from '@angular/router';
-//  import { TitleCasePipe } from "@angular/common";
-// //import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-// //import { environment } from 'src/environments/environment';
-// import { HttpClientModule } from '@angular/common/http';
-// //import { AppRoutingModule } from './app-routing.module';
-// //import { AppComponent } from './app.component';
-//  import { LoaderInterceptor } from './_shared/interceptor/loader.interceptor';
-//  import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -78,6 +68,13 @@ import { ResetPasswordComponent } from './client-profile/client-security/reset-p
     ClientPaymentHistoryComponent,
       ClientSecurityComponent,
       ResetPasswordComponent,
+      HomeComponent,
+      DietplanComponent,
+      WorkoutsComponent,
+     
+      DietplanListComponent,
+      DietplanTemplateComponent,
+      DietCreateComponent,
    
    
   ],
