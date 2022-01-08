@@ -57,6 +57,7 @@ export class DietplanListComponent implements OnInit {
     } else
       this.filteredItemList = this.dietPlanList;
     this.groupedSelectedItems = this.filteredItemList;
+
   }
 
   sortItem(order) {

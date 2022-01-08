@@ -1,50 +1,35 @@
-<p>diet-create works!</p>
 
-<div>
-    <form [formGroup]="dietplanForm" (ngSubmit)="Save()">
-     
-            <div>Food Type<span class="required">*</span></div>
-        
-            <div class="custom-input">
-        
-                <input type="text" formControlName="name"/>
-        
-              <!-- <div *ngIf="!dietplanForm.controls.name.valid && dietplanForm.controls.name &&
-                dietplanForm.controls.name.dirty" class="validator-error">
-                Please enter a Foodtype.
-              </div> -->
-            </div>
+<form>
+ 
+  <p>
+    <label for="name">Name </label>
+    <input type="text" id="name" name="name" formControlName="name">
+  </p>
+ 
+ 
+  Skills:
+  <!-- <div formArrayName="skills">
+    <div *ngFor="let skill of skills.controls; let i=index"> -->
+      <!-- <div [formGroupName]="i">
+        {{i}}
+        skill name :
+        <input type="text" formControlName="skill">
          
+ 
         
-            <label color="secondary">Unit<span class=" required">*</span></label>
-        
-  
-            <!-- <div class="segment-container" formControlName="unit">
-              <button value="Grams">
-                <label>grams</label>
-              </button>
-              <button value="Pcs">
-                <label>pieces</label>
-              </button>
-              <button value="Ml">
-                <label>ml</label>
-              </button>
-           </div> -->
-  
-       
-        
-  
-       
-          <div *ngIf="dietPlanId">
-            <button color="danger" (click)="deleteDietplan()" class="custom-button">
-              <mat-icon name="trash-outline">delete</mat-icon>
-            </button>
-        </div>
-            <button color="warning" type="submit" class="custom-button" >
-              <!-- <ion-icon name="save-outline"></ion-icon>Save -->save
-            </button>
-         
-    </form>
-  </div>
+      </div> -->
+    <!-- </div>
 
-  <button (click)='logout()'>logout</button>
+  </div> -->
+ 
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+ 
+</form>
+ 
+ 
+<p>
+ 
+</p>
+ 

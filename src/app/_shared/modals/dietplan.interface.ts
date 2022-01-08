@@ -1,8 +1,9 @@
 export interface Food {
-  name: string;
-  unit: string;
-  note: string;
-  quantity: number;
+  name?: string;
+  unit?: string;
+  note?: string;
+  quantity?: number;
+  foodItem:string;
 }
 
 export interface DietPlanTemplate {

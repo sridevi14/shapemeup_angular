@@ -7,7 +7,7 @@
  
 
   
-      <!-- <ion-searchbar placeholder="Search" (ionChange)="searchItems($event)" class="text"></ion-searchbar> -->
+      <input placeholder="Search" (onChange)="searchItems($event)" class="text"/>
   
    
       <mat-icon class="sort" name="caret-down" (click)="sortItem('desc')" *ngIf="sortOrder === 'asc'">swap_vert</mat-icon> 

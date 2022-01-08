@@ -1,1 +1,77 @@
-<p>dietplan-template works!</p>
+
+    
+  
+  
+  
+    <div eventType="select" 
+       *ngIf="showTemplateList && templateList.length >= 0">
+  </div>
+  
+  <!-- 
+    <form #templateForm="ngForm" #surveyForm="ngForm" *ngIf="dietPlanList.length > 0 && !showTemplateList">
+      <div class="form-group">
+        <div class="custom-input">
+          <label>Template Name<span class="required">*</span></label>
+         
+            <input class="form-control" type="text" [(ngModel)]="selectedTemplate.name" max="3" name="template_name"
+              min="3" #templateNameModal="ngModel" required/>
+         
+        </div>
+      </div>
+  
+      <div class="card-container" *ngIf="dietPlanList.length > 0">
+      
+          <label class="selectableLabel">Food Items</label>
+          <ionic-selectable [isMultiple]="true" confirmButtonText="Add" [(ngModel)]="selectedTemplate.foods"
+            color="secondary" name="name" groupValueField="category.id" required groupTextField="category.name"
+            [items]="dietPlanList" itemValueField="id" itemTextField="name" [canSearch]="true">
+          </ionic-selectable> 
+       
+      </div>
+  
+      <div *ngIf="selectedTemplate.foods.length !== 0">
+       
+         <label></label> 
+          <label>Food Items</label> 
+         <label>Quantity</label> 
+
+        <div *ngFor="let food of selectedTemplate.foods;let wIndex = index">
+         
+            <a  (click)="removeFood(wIndex)">
+             image
+            </a>
+            <p class="add-color">{{food.name}}</p>
+           
+             
+                <input name="quantity{{wIndex}}" type="number" [(ngModel)]="food.quantity"/>
+            
+          
+              <label>{{food.unit}}</label>
+        </div>
+    </div>
+     
+  
+      <div class="no-content" *ngIf="selectedTemplate.foods.length === 0">
+        <label class="secondary">Select Food Items to Add in Template</label>
+      </div>
+  
+    
+            <button color="danger" (click)="dietPlanTemplateEvent({type: 'delete',value: selectedTemplate})"
+              class="custom-button">
+              
+                Delete
+            </button>
+       
+            <button [disabled]="!templateForm.valid" color="warning"
+              (click)="dietPlanTemplateEvent({type: 'save',value: selectedTemplate})" type="submit" class="custom-button">
+              
+                Save 
+            </button>
+          
+  
+  
+    </form>
+  
+  
+   -->
+<p>girl</p>

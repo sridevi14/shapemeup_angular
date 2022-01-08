@@ -9,9 +9,9 @@ export class DietplanService {
   dietPlanLists: any[] = [];
   constructor(private firestore: AngularFirestore) { }
 
-  async createDietplan(newdietplan: Food) {
+  async createDietplan(newdietplan: Food,coachid:string) {
  
-    await this.firestore.collection('foodItem/').add(newdietplan);
+    await this.firestore.doc('foodItem/'+coachid).set(newdietplan);
    
     alert("added");
   }
@@ -30,7 +30,7 @@ export class DietplanService {
   }
 
   getDietPlanList(order: string = 'asc') {
-    return this.firestore.collection<any>('foodItem', ref => ref.orderBy('name', order === 'desc' ? 'desc' : 'asc')).valueChanges({ idField: 'id' });
+     return this.firestore.collection<any>('foodItem', ref => ref.where("name", "==","sea")).valueChanges();
   }
 
   // Diet plan template
